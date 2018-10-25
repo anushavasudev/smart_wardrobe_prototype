@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smart Closet Wizard of Oz Controller</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-4">
+            <h1>Wizard Controller</h1>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <button class="action-trigger btn btn-lg btn-primary btn-block" data-woz-action="reset">Reset</button>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <button class="action-trigger btn btn-lg btn-primary btn-block" data-woz-type="json" data-woz-action="scan" data-woz-data="clothes_id:0">Scan clothes 1</button>
+            </div>
+            <div class="col">
+                <button class="action-trigger btn btn-lg btn-primary btn-block" data-woz-type="json" data-woz-action="scan" data-woz-data="clothes_id:1">Scan clothes 2</button>
+            </div>
+            <div class="col">
+                <button class="action-trigger btn btn-lg btn-primary btn-block" data-woz-type="json" data-woz-action="scan" data-woz-data="clothes_id:2">Scan clothes 3</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        $(function () {
+            var socket = io()
+            // socket.emit('woz_controller_connection', '')
+            $('.action-trigger').click(function () {
+                var action = $(this).data('woz-action')
+                var dataType = $(this).data('woz-type') === 'json' ? 'json' : 'text'
+                var data = $(this).data('woz-data') || ''
+                
+                if (dataType === "json") {
+                    data = parseToJson(data)
+                }
+                
+                var payload = {
+                    action: action,
+                    dataType: dataType,
+                    data: data
+                }
+                
+                console.log('emitting', payload)
+                socket.emit('woz_action', payload)
+            })
+        })
+
+        function parseToJson (s) {
+            var kvPairs = s.split(',')
+            var json = {}
+            for (index in kvPairs) {
+                var kv = kvPairs[index].split(':')
+                json[kv[0]] = kv[1]
+            }
+            return json
+        }
+    </script>
+    <!-- <script src="woz_controller.js"></script> -->
+</body>
+
+</html>
