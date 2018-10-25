@@ -4,9 +4,11 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
 app.use(express.static('public'))
+app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/main_app/index.html');
+    // res.sendFile(__dirname + '/main_app/index.html');
+    res.render('main_app/0_index');
 })
 
 app.get('/controller', function (req, res) {
@@ -19,9 +21,10 @@ app.get('/controller/:page', function (req, res) {
 })
 
 app.get('/:page', function (req, res) {
-    var page = req.params.page || 'index'
+    var page = req.params.page || '0_index'
     console.log(req.params.page)
-    res.sendFile(__dirname + '/main_app/' + page + '.html');
+    // res.sendFile(__dirname + '/main_app/' + page + '.html');
+    res.render('main_app/' + page);
 })
 
 io.on('connection', function (socket) {
