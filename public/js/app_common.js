@@ -48,14 +48,19 @@ $(function () {
     socket.on('woz_action', function (msg) {
         // alert(msg)
         
-        if (msg.action === 'scan') {
+        if (msg.action === 'scan' && isScanEnabled()) {
             window.navigator.vibrate(200);
             console.log(clothesDataToWord(clothesData[+msg.data.clothes_id]))
-            swal( 
-                'Tag Scanned!',
-                clothesDataToWord(clothesData[+msg.data.clothes_id]),
-                'success'
-            );
+
+            $('#scan-modal .scan-result').html(clothesDataToSummary(clothesData[+msg.data.clothes_id]))
+            $('#info-modal .scan-result').html(clothesDataToWord(clothesData[+msg.data.clothes_id]))
+            $('#scan-modal').modal('show')
+
+            // swal( 
+            //     'Tag Scanned!',
+            //     clothesDataToWord(clothesData[+msg.data.clothes_id]),
+            //     'success'
+            // );
             // var elem = $('<div role="alert">')
             // elem.text('Clothes scanned:' + )
             // $('#content').append(elem)
@@ -79,16 +84,29 @@ function clothesDataToWord (d) {
 }
 
 
+function clothesDataToSummary (d) {
+    var outString = 'This is a '
+    outString += d.color + ' ' + d.type + ' from ' + d.brand + '.<br>'
+    return outString
+}
+
+
+function isScanEnabled () {
+    var attr = $('body').attr('enable-scan')
+    return typeof attr !== typeof undefined && attr !== false
+}
+
+
 
 // Find the right method, call on correct element
 function launchIntoFullscreen (element) {
     if (element.requestFullscreen) {
-        element.requestFullscreen();
+        element.requestFullscreen()
     } else if (element.mozRequestFullScreen) {
-        element.mozRequestFullScreen();
+        element.mozRequestFullScreen()
     } else if (element.webkitRequestFullscreen) {
-        element.webkitRequestFullscreen();
+        element.webkitRequestFullscreen()
     } else if (element.msRequestFullscreen) {
-        element.msRequestFullscreen();
+        element.msRequestFullscreen()
     }
 }

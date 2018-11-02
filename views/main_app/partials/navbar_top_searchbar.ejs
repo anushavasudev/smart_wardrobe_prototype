@@ -1,0 +1,21 @@
+<nav class="navbar fixed-top navbar-dark bg-dark">
+    <% if (locals.back !== false) { %>
+        <div class="col-2">
+            <a href="#" class="navbar-brand navsearch" onclick="history.go(-1)">‹ Back</a>
+        </div>
+        <div class="col-8">
+            <input class="form-control" type="search" placeholder="Search items or outfits e.g. casual outfit" aria-label="Search">
+        </div>
+    <% } else { %>
+        <div class="col-10">
+            <div class="form" action="/search_result">
+                <input class="form-control" type="search" placeholder="Search items or outfits e.g. casual outfit" aria-label="Search">
+            </div>
+        </div>
+    <% } %>
+    <div class="col-2">
+        <a href="#" class="navbar-brand navsearch">
+            <i class="fas fa-list" aria-label="pick up list, 0 items"></i>
+        </a>
+    </div>
+</nav>

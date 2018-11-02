@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head'); %>
+</head>
+
+<body style="padding-top: 60px">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Add/Edit Details</h1>
+                <p>Add details</p>
+                <form action="/1c_add_details_complete">
+                    <label>Notes</label>
+                    <textarea class="form-control" id="" cols="" rows="4"></textarea>
+                    <br>
+                    <label>Tags</label>
+                    <input type="text" class="form-control" name="" id="">
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg">Save</button>
+                </form>
+            </div>
+        </div>
+        <div id="content"></div>
+        <!-- <a href="scan" class="btn btn-primary">Go to scan page</a> -->
+    </div>
+
+    <%- include('partials/navbar_top', { back_link: '/1a_add_to_closet' }); %>
+    <%- include('partials/navbar_bottom'); %>
+    
+    <%- include('partials/scripts'); %>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head'); %>
+</head>
+
+<body style="padding-top: 60px">
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Clothes list</h1>
+                <p>Tops</p>
+                <% for(var i = 0; i < 5; i++) { %>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Blue T-shirt from H&amp;M</h5>
+                        <p class="card-text">Blue T-shirt from H&amp;M, Size M, Care Tag</p>
+                        <a href="2b_clothes_info" class="btn btn-primary">View Info</a>
+                        <a href="2c_pick_up" class="btn btn-primary">Pick up from closet</a>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+        <div id="content"></div>
+        <!-- <a href="scan" class="btn btn-primary">Go to scan page</a> -->
+    </div>
+    
+    <%- include('partials/navbar_top', { back_link: '/2_my_closet', search: true, search_result: 'clothes_list' }); %>
+    <%- include('partials/navbar_bottom'); %>
+
+    <%- include('partials/scripts'); %>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head'); %>
+</head>
+
+<body style="padding-top: 60px" enable-scan>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h1 role="alert">Striped Black/White T-Shirt from H&amp;M</h1>
+                <hr>
+                <p>Striped Black/White Short-sleeved Crew-neck T-shirt from H&amp;M</p>
+                <hr>
+                <a href="#" class="btn btn-primary btn-block">
+                    <i class="fas fa-microphone"></i> Ask for specific tag information</a>
+                <a href="#" class="btn btn-primary btn-block">
+                    <i class="fas fa-plus"></i> Add to my clothes list</a>
+                <hr>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Type?</td>
+                            <td>Short-sleeved Crew-neck T-shirt</td>
+                        </tr>
+                        <tr>
+                            <td>Material</td>
+                            <td>100% Cotton</td>
+                        </tr>
+                        <tr>
+                            <td>Pattern/Color</td>
+                            <td>Striped Black/White</td>
+                        </tr>
+                        <tr>
+                            <td>Style</td>
+                            <td>Casual</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#" class="btn btn-outline-danger btn-block">
+                    <i class="fas fa-trash"></i> Remove from my clothes list</a>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/navbar_top_title', { title: 'Scanning Tag...', icon: false }); %>
+        <%- include('partials/navbar_bottom'); %>
+
+            <%- include('partials/scripts'); %>
+
+                <script>
+                    function onScan() {
+
+                    }
+
+                    $(function () {
+                        $('#more-info').click(function () {
+                            $('#info-modal').modal('show')
+                        })
+                    })
+                </script>
+</body>
+
+</html>

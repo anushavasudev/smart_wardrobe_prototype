@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head'); %>
+    <meta http-equiv="refresh" content="1.5;url=/2d_pick_up_complete" />
+</head>
+
+<body style="padding-top: 60px">
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Picking Up Clothes..</h1>
+                <p>Blue T-shirt from H&amp;M</p>
+                <p>Please wait.</p>
+            </div>
+        </div>
+        <div id="content"></div>
+        <!-- <a href="scan" class="btn btn-primary">Go to scan page</a> -->
+    </div>
+
+    <%- include('partials/navbar_top', { back_link: '/2b_clothes_info', search: true, search_result: 'clothes_list' }); %>
+    <%- include('partials/navbar_bottom'); %>
+
+    <%- include('partials/scripts'); %>
+</body>
+
+</html>

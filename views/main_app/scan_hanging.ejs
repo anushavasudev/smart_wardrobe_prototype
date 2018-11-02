@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head'); %>
+</head>
+
+<body style="padding-top: 60px" enable-scan>
+
+    <div class="fullpage-center">
+        <div class="text-center">
+            <i class="fas fa-tshirt icon-huge mb-4 "></i>
+            <p>Please hang your clothes on the smart closet.</p>
+            <br>
+            <br>
+            <a href="#" class="btn btn-primary btn-block">Not now</a>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="scan-modal" tabindex="-1" role="dialog" aria-labelledby="scan-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scan-modal-label">Tag Scanned!:
+                        <span class="scan-result"></span>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card bg-light">
+                        <div class="card-body scan-result text-center" role="alert">
+
+                        </div>
+                    </div>
+                    <hr>
+                    <button type="button" id="more-info" class="btn btn-primary btn-block btn-lg">Ask for information</button>
+                    <a href="/1a_add_to_closet" class="btn btn-primary btn-block btn-lg">Add to closet</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="info-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="info-modal-label">Ask what you want to know about this clothes</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        [MIC ICON]
+                    </div>
+                    <div class="card bg-light">
+                        <div class="card-body scan-result" role="alert">
+
+                        </div>
+                    </div>
+                    <hr>
+                    <button type="buton" class="btn btn-primary btn-block btn-lg">What's the brand</button>
+                    <button type="buton" class="btn btn-primary btn-block btn-lg">What's the style</button>
+                    <button type="buton" class="btn btn-primary btn-block btn-lg">Laundry information</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/navbar_top_title', { title: 'Scanning Tag...', icon: false }); %>
+    <%- include('partials/navbar_bottom'); %>
+
+    <%- include('partials/scripts'); %>
+
+    <script>
+        $(function () {
+            $('#more-info').click(function () {
+                $('#info-modal').modal('show')
+            })
+        })
+    </script>
+</body>
+
+</html>

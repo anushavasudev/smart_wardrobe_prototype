@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head'); %>
+</head>
+
+<body style="padding-top: 60px">
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Your Clothes</h1>
+                <h2>Clothes in the wardrobe</h2>
+                <div class="card">...</div>
+                <div class="card">...</div>
+                <div class="card">...</div>
+                <h2>Other Clothes</h2>
+                <div class="card">...</div>
+                <div class="card">...</div>
+                <div class="card">...</div>
+                <!-- <a href="/1a_add_details" class="btn btn-lg btn-primary">add details</a> -->
+            </div>
+        </div>
+        <!-- <a href="scan" class="btn btn-primary">Go to scan page</a> -->
+    </div>
+
+    <%- include('partials/navbar_top_searchbar', { back: false }); %>
+    <%- include('partials/navbar_bottom'); %>
+    
+    <%- include('partials/scripts'); %>
+</body>
+
+</html>

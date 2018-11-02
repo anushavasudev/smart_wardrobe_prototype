@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
     // res.sendFile(__dirname + '/main_app/index.html');
-    res.render('main_app/0_index');
+    res.redirect('/home');
 })
 
 app.get('/controller', function (req, res) {

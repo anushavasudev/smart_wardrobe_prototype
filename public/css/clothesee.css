@@ -1,0 +1,23 @@
+.iconset {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+#bottom-bar {
+    border-top: 1px solid #333;
+}
+
+.fullpage-center {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.icon-huge {
+    font-size: 60pt;
+}

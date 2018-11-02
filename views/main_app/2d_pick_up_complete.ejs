@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head'); %>
+</head>
+
+<body style="padding-top: 60px">
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Picking Up Complete</h1>
+                <p>Your clothes is popped up from the rack.</p>
+                <a href="/2_my_closet" class="btn btn-block btn-primary">Back to My Closet</a>
+                <a href="/" class="btn btn-block btn-primary">Back to Home</a>
+            </div>
+        </div>
+        <div id="content"></div>
+        <!-- <a href="scan" class="btn btn-primary">Go to scan page</a> -->
+    </div>
+
+    <%- include('partials/navbar_top', { back_link: '/clothes_info', search: true, search_result: 'clothes_list' }); %>
+    <%- include('partials/navbar_bottom'); %>
+
+    <%- include('partials/scripts'); %>
+</body>
+
+</html>
