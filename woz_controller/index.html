@@ -8,6 +8,7 @@
     <title>Smart Closet Wizard of Oz Controller</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <link rel="icon" href="/public/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -30,6 +31,29 @@
             <div class="col">
                 <button class="action-trigger btn btn-lg btn-primary btn-block" data-woz-type="json" data-woz-action="scan" data-woz-data="clothes_id:2">Scan clothes 3</button>
             </div>
+            <div class="col">
+                <button class="action-trigger btn btn-lg btn-primary btn-block" data-woz-type="json" data-woz-action="scan" data-woz-data="clothes_id:3">Scan clothes 4</button>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <button class="action-trigger btn btn-lg btn-primary btn-block" data-woz-type="json" data-woz-action="hang" data-woz-data="clothes_id:0">Hang clothes 1</button>
+            </div>
+            <div class="col">
+                <button class="action-trigger btn btn-lg btn-primary btn-block" data-woz-type="json" data-woz-action="hang" data-woz-data="clothes_id:1">Hang clothes 2</button>
+            </div>
+            <div class="col">
+                <button class="action-trigger btn btn-lg btn-primary btn-block" data-woz-type="json" data-woz-action="hang" data-woz-data="clothes_id:2">Hang clothes 3</button>
+            </div>
+            <div class="col">
+                <button class="action-trigger btn btn-lg btn-primary btn-block" data-woz-type="json" data-woz-action="hang" data-woz-data="clothes_id:3">Hang clothes 4</button>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                TOGGLE HOME MODE
+                <input type="checkbox" name="" class="action-toggle" data-woz-toggle-key="homeMode" data-woz-toggle-default="true">
+            </div>
         </div>
     </div>
 
@@ -44,23 +68,43 @@
                 var action = $(this).data('woz-action')
                 var dataType = $(this).data('woz-type') === 'json' ? 'json' : 'text'
                 var data = $(this).data('woz-data') || ''
-                
+
+                console.log($(this), action)
+
                 if (dataType === "json") {
                     data = parseToJson(data)
                 }
-                
+
                 var payload = {
                     action: action,
                     dataType: dataType,
                     data: data
                 }
-                
+
                 console.log('emitting', payload)
                 socket.emit('woz_action', payload)
             })
+
+
+            $('.action-toggle').each(function () {
+                console.log('-', $(this).data('woz-toggle-default') == true)
+                $(this).prop('checked', $(this).data('woz-toggle-default'))
+                var payload = {
+                    key: $(this).data('woz-toggle-key'),
+                    value: $(this).prop('checked')
+                }
+                socket.emit('woz_toggle', payload)
+            })
+            $('.action-toggle').click(function () {
+                var payload = {
+                    key: $(this).data('woz-toggle-key'),
+                    value: $(this).prop('checked')
+                }
+                socket.emit('woz_toggle', payload)
+            })
         })
 
-        function parseToJson (s) {
+        function parseToJson(s) {
             var kvPairs = s.split(',')
             var json = {}
             for (index in kvPairs) {

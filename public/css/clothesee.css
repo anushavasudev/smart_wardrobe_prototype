@@ -1,3 +1,8 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
+
 .iconset {
     flex-basis: 0;
     flex-grow: 1;

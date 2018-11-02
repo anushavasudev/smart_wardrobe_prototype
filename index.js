@@ -3,6 +3,8 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
+var toggles = {}
+
 app.use(express.static('public'))
 app.set('view engine', 'ejs');
 
@@ -41,6 +43,16 @@ io.on('connection', function (socket) {
     socket.on('woz_action', function (msg) {
         console.log('woz_action:', msg);
         io.emit('woz_action', msg);
+    });
+
+    socket.on('woz_toggle', function (msg) {
+        console.log('woz_toggle:', msg);
+        toggles[msg.key] = msg.value
+    });
+
+    socket.on('woz_toggle_query', function (msg) {
+        console.log('woz_toggle_query:', msg);
+        io.emit('woz_toggle_query_answer', toggles);
     });
 });
 

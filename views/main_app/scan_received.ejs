@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head'); %>
+</head>
+
+<body>
+
+    <div class="fullpage-center">
+        <div class="text-center">
+            <i class="fas fa-check icon-huge mb-4 "></i>
+            <p>We have received your clothes in the wardrobe!</p>
+            <br>
+            <br>
+            <a href="/scan" class="btn btn-primary btn-block">Scan other clothes</a>
+            <a href="/home" class="btn btn-primary btn-block">Back to home</a>
+        </div>
+    </div>
+
+    <%- include('partials/navbar_top_title', { title: 'Clothes Received!', icon: false }); %>
+    <%- include('partials/navbar_bottom'); %>
+
+    <%- include('partials/scripts'); %>
+
+    <script>
+        $(function () {
+            $('#more-info').click(function () {
+                $('#info-modal').modal('show')
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -5,7 +5,7 @@
     <%- include('partials/head'); %>
 </head>
 
-<body style="padding-top: 60px" enable-scan>
+<body>
 
     <div class="fullpage-center">
         <div class="text-center">
@@ -16,7 +16,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="scan-modal" tabindex="-1" role="dialog" aria-labelledby="scan-modal-label" aria-hidden="true">
+    <!-- <div class="modal fade" id="scan-modal" tabindex="-1" role="dialog" aria-labelledby="scan-modal-label" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -42,9 +42,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="info-modal-label" aria-hidden="true">
+    <!-- <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="info-modal-label" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -72,7 +72,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <%- include('partials/navbar_top_title', { title: 'Scanning Tag...', icon: false }); %>
     <%- include('partials/navbar_bottom'); %>
@@ -80,11 +80,15 @@
     <%- include('partials/scripts'); %>
 
     <script>
-        $(function () {
-            $('#more-info').click(function () {
-                $('#info-modal').modal('show')
-            })
-        })
+        function onScanned (info) {
+            window.location.href = '/scan_result'
+        }
+
+        // $(function () {
+        //     $('#more-info').click(function () {
+        //         $('#info-modal').modal('show')
+        //     })
+        // })
     </script>
 </body>
 

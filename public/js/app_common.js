@@ -40,21 +40,26 @@ var clothesData = [
     }
 ]
 
+var socket = io()
+
 $(function () {
     // $(document).click(function () { launchIntoFullscreen(document.documentElement) })
-
-    var socket = io()
 
     socket.on('woz_action', function (msg) {
         // alert(msg)
         
-        if (msg.action === 'scan' && isScanEnabled()) {
-            window.navigator.vibrate(200);
-            console.log(clothesDataToWord(clothesData[+msg.data.clothes_id]))
+        if (msg.action === 'scan') {
+            
+            if (typeof onScanned === "function") {
+                window.navigator.vibrate(200);
+                onScanned(clothesData[+msg.data.clothes_id])
+            }
 
-            $('#scan-modal .scan-result').html(clothesDataToSummary(clothesData[+msg.data.clothes_id]))
-            $('#info-modal .scan-result').html(clothesDataToWord(clothesData[+msg.data.clothes_id]))
-            $('#scan-modal').modal('show')
+            // console.log(clothesDataToWord(clothesData[+msg.data.clothes_id]))
+
+            // $('#scan-modal .scan-result').html(clothesDataToSummary(clothesData[+msg.data.clothes_id]))
+            // $('#info-modal .scan-result').html(clothesDataToWord(clothesData[+msg.data.clothes_id]))
+            // $('#scan-modal').modal('show')
 
             // swal( 
             //     'Tag Scanned!',
@@ -69,6 +74,19 @@ $(function () {
         if (msg.action === 'reset') {
             console.log('resetting')
             window.location.href = '/'
+        }
+
+        if (msg.action === 'reset') {
+            console.log('resetting')
+            window.location.href = '/'
+        }
+
+        if (msg.action === 'hang') {
+            console.log('hanged')
+            if (typeof onHanged === "function") {
+                window.navigator.vibrate([100,50,100]);
+                onHanged(clothesData[+msg.data.clothes_id])
+            }
         }
     })
 })
@@ -109,4 +127,12 @@ function launchIntoFullscreen (element) {
     } else if (element.msRequestFullscreen) {
         element.msRequestFullscreen()
     }
+}
+
+
+function getToggleValue (callback) {
+    socket.emit('woz_toggle_query')
+    socket.on('woz_toggle_query_answer', function (msg) {
+        callback(msg)
+    })
 }

@@ -5,7 +5,7 @@
     <%- include('partials/head'); %>
 </head>
 
-<body style="padding-top: 60px" enable-scan>
+<body>
 
     <div class="container-fluid">
         <div class="row">
@@ -16,7 +16,7 @@
                 <hr>
                 <a href="#" class="btn btn-primary btn-block">
                     <i class="fas fa-microphone"></i> Ask for specific tag information</a>
-                <a href="#" class="btn btn-primary btn-block">
+                <a href="#" class="btn btn-primary btn-block" id="add-to-clothes-list">
                     <i class="fas fa-plus"></i> Add to my clothes list</a>
                 <hr>
                 <table class="table">
@@ -51,15 +51,25 @@
             <%- include('partials/scripts'); %>
 
                 <script>
-                    function onScan() {
-
+                    function onScanned (info) {
+                        window.location.href = '/scan_result'
                     }
 
-                    $(function () {
-                        $('#more-info').click(function () {
-                            $('#info-modal').modal('show')
-                        })
+                    getToggleValue(function (toggles) {
+                        console.log(toggles)
+                        $('#add-to-clothes-list').prop('disabled', !toggles.homeMode)
+                        if (!toggles.homeMode) {
+                            $('#add-to-clothes-list').addClass('disabled')
+                        } else {
+                            $('#add-to-clothes-list').removeClass('disabled')
+                        }
                     })
+
+                    // $(function () {
+                    //     $('#more-info').click(function () {
+                    //         $('#info-modal').modal('show')
+                    //     })
+                    // })
                 </script>
 </body>
 
