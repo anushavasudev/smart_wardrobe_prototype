@@ -6,16 +6,24 @@
         <div class="col-8">
             <input class="form-control" type="search" placeholder="Search items or outfits e.g. casual outfit" aria-label="Search">
         </div>
-    <% } else { %>
-        <div class="col-10">
-            <div class="form" action="/search_result">
-                <input class="form-control" type="search" placeholder="Search items or outfits e.g. casual outfit" aria-label="Search">
+        <% } else { %>
+            <div class="col-10">
+                <form action="/search_result">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search items or outfits e.g. casual outfit" aria-label="Search" value="<%= locals.fill ? locals.fill : '' %>">
+                        <div class="input-group-append">
+                            <button class="btn btn-light" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </div>
-    <% } %>
-    <div class="col-2">
-        <a href="#" class="navbar-brand navsearch">
-            <i class="fas fa-list" aria-label="pick up list, 0 items"></i>
-        </a>
-    </div>
+            <% } %>
+                <div class="col-2">
+                    <a href="/pickup_list" class="navbar-brand navsearch">
+                        <i class="fas fa-list" aria-label="2 items in your pick up list"></i>
+                        <span class="badge badge-success">2</span>
+                    </a>
+                </div>
 </nav>

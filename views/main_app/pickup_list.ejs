@@ -10,22 +10,24 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1>Your Clothes</h1>
-                <h2>Clothes in the wardrobe</h2>
+                <div class="mt-3 btn-group btn-group-fullwidth" role="group" aria-label="Basic example">
+                    <a href="#" class="btn btn-primary">Current</a>
+                    <a href="#" class="btn btn-outline-dark">History</a>
+                </div>
                 <%- include('partials/clothes_card', { title: 'Favorites' }); %>
                 <%- include('partials/clothes_card', { title: 'Favorites' }); %>
                 <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                <h2>Other Clothes</h2>
                 <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
+                
+                <a href="#" class="btn btn-primary btn-block mt-3">Pick up all</a>
+                <a href="#" class="btn btn-primary btn-block mt-3">Ask for opinion</a>
                 <!-- <a href="/1a_add_details" class="btn btn-lg btn-primary">add details</a> -->
             </div>
         </div>
         <!-- <a href="scan" class="btn btn-primary">Go to scan page</a> -->
     </div>
 
-    <%- include('partials/navbar_top_searchbar', { back: false }); %>
+    <%- include('partials/navbar_top_title', { title: 'Pick-up List' }); %>
     <%- include('partials/navbar_bottom', { active: 1 }); %>
     
     <%- include('partials/scripts'); %>

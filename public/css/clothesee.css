@@ -26,3 +26,15 @@ body {
 .icon-huge {
     font-size: 60pt;
 }
+
+.btn-group-fullwidth {
+    display: flex;
+}
+
+.btn-group-fullwidth .btn {
+    flex: 1;
+}
+
+.navbar-brand.iconset.active {
+    color: #0088ff;
+}

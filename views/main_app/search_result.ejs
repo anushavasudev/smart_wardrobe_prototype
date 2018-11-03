@@ -10,12 +10,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1>Your Clothes</h1>
-                <h2>Clothes in the wardrobe</h2>
-                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                <h2>Other Clothes</h2>
+                <h1>Search Result for 'Casual Shirt'</h1>
                 <%- include('partials/clothes_card', { title: 'Favorites' }); %>
                 <%- include('partials/clothes_card', { title: 'Favorites' }); %>
                 <%- include('partials/clothes_card', { title: 'Favorites' }); %>
@@ -25,8 +20,8 @@
         <!-- <a href="scan" class="btn btn-primary">Go to scan page</a> -->
     </div>
 
-    <%- include('partials/navbar_top_searchbar', { back: false }); %>
-    <%- include('partials/navbar_bottom', { active: 1 }); %>
+    <%- include('partials/navbar_top_searchbar', { back: false, fill: 'Casual Shirt' }); %>
+    <%- include('partials/navbar_bottom, { active: 1 }'); %>
     
     <%- include('partials/scripts'); %>
 </body>
