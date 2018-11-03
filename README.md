@@ -10,6 +10,7 @@ Team TAXY for CS 6755 @ Georgia Tech
 1. Run project with `nodemon`
 2. Go to http://localhost:3000 and you should see the home page
 3. Go to http://localhost:3000/controller and you should see the Wizard of Oz control panel.
+4. If you want to test the main app on the phone. You can find your laptop's IP address and access it from the phone e.g., http://168.xxx.xxx.xxx:3000.
 
 ## Important Files and Directories
 - `index.js` main server JS file, routing and socket.io stuffs are handled here.
