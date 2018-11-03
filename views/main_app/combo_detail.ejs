@@ -6,15 +6,33 @@
 </head>
 
 <body>
-        <%- include('partials/navbar_top_title', { title: 'Waiting to Hang', icon: false }); %>
 
-    <div class="fullpage-center">
-        <div class="text-center">
-            <i class="fas fa-tshirt icon-huge mb-4 "></i>
-            <p>Please hang your clothes on the smart closet.</p>
-            <br>
-            <br>
-            <a href="/scan" class="btn btn-primary btn-block">Not now</a>
+        <%- include('partials/navbar_top_title', { title: 'Combo Details', back: true, icon: true }); %>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col-10">
+                        <h2>Striped T-Shirt + Blue Jeans</h2>
+                        <p>2-piece combo</p>
+                    </div>
+                    <div class="col-2">
+                        <%- include('fav_toggle', { favorite: locals.favorite }); %>
+                    </div>
+                </div>
+
+                <div class="note"><i aria-hidden="true" class="fas fa-tag"></i> Tags: <a href="#" class="badge badge-secondary">Casual</a>, <a href="#" class="badge badge-secondary">Summer</a></div>
+                <div class="note"><i aria-hidden="true" class="fas fa-sticky-note"></i> Note: My favorite outgoing combo!</div>
+                <a href="#">Edit Tag or Note</a>
+                <hr>
+
+                <a href="#" class="btn btn-primary btn-block" data-popup-msg="Select sharing option">Get Opinion from Others</a>
+                <a href="/pickup" class="btn btn-primary btn-block">Pick up All</a>
+                
+                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
+                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
+            </div>
         </div>
     </div>
 
@@ -45,9 +63,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="info-modal-label" aria-hidden="true">
+    <!-- <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="info-modal-label" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -77,21 +95,21 @@
         </div>
     </div> -->
 
-    <%- include('partials/navbar_bottom', { active: 2 }); %>
+        <%- include('partials/navbar_bottom', { active: 2 }); %>
 
-    <%- include('partials/scripts'); %>
+            <%- include('partials/scripts'); %>
 
-    <script>
-        function onHanged (info) {
-            window.location.href = '/scan_received'
-        }
+                <script>
+                    function onScanned(info) {
+                        window.location.href = '/scan_result'
+                    }
 
         // $(function () {
         //     $('#more-info').click(function () {
         //         $('#info-modal').modal('show')
         //     })
         // })
-    </script>
+                </script>
 </body>
 
 </html>

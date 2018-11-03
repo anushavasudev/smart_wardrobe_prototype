@@ -1,15 +1,20 @@
-<nav class="navbar fixed-bottom navbar-light bg-light justify-content-between pb-0" id="bottom-bar">
+<nav role=”navigation” aria-label="navigation menu" class="navbar fixed-bottom navbar-light bg-light justify-content-between pb-0" id="bottom-bar">
     <a class="navbar-brand iconset text-center <%= locals.active == 1 ? 'active' : '' %>" href="/home">
-        <div class="iconset-icon"><i class="fas fa-home"></i></div>
+        <div class="iconset-icon">
+            <i class="fas fa-home"></i>
+        </div>
         <div class="iconset-caption">Home</div>
     </a>
     <a class="navbar-brand iconset text-center <%= locals.active == 2 ? 'active' : '' %>" href="/scan">
-        <div class="iconset-icon"><i class="fas fa-mobile-alt"></i></div>
+        <div class="iconset-icon">
+            <i class="fas fa-mobile-alt"></i>
+        </div>
         <div class="iconset-caption">Scan</div>
     </a>
     <a class="navbar-brand iconset text-center <%= locals.active == 3 ? 'active' : '' %>" href="/favorites">
-        <div class="iconset-icon"><i class="fas fa-heart"></i></div>
+        <div class="iconset-icon">
+            <i class="fas fa-heart"></i>
+        </div>
         <div class="iconset-caption">Favorites</div>
     </a>
-</ul>
 </nav>

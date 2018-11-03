@@ -7,6 +7,8 @@
 
 <body>
 
+    <%- include('partials/navbar_top_title', { title: 'Pick-up List' }); %>
+
     <div class="container">
         <div class="row">
             <div class="col">
@@ -19,15 +21,14 @@
                 <%- include('partials/clothes_card', { title: 'Favorites' }); %>
                 <%- include('partials/clothes_card', { title: 'Favorites' }); %>
                 
-                <a href="#" class="btn btn-primary btn-block mt-3">Pick up all</a>
-                <a href="#" class="btn btn-primary btn-block mt-3">Ask for opinion</a>
+                <a href="/pickup" class="btn btn-primary btn-block mt-3">Pick up all</a>
+                <a href="#" class="btn btn-primary btn-block mt-3" >Ask for opinion</a>
                 <!-- <a href="/1a_add_details" class="btn btn-lg btn-primary">add details</a> -->
             </div>
         </div>
         <!-- <a href="scan" class="btn btn-primary">Go to scan page</a> -->
     </div>
 
-    <%- include('partials/navbar_top_title', { title: 'Pick-up List' }); %>
     <%- include('partials/navbar_bottom', { active: 1 }); %>
     
     <%- include('partials/scripts'); %>

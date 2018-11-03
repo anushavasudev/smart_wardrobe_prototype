@@ -6,6 +6,7 @@
 </head>
 
 <body>
+    <%- include('partials/navbar_top_searchbar', { back: false }); %>
 
     <div class="container">
         <div class="row">
@@ -25,7 +26,6 @@
         <!-- <a href="scan" class="btn btn-primary">Go to scan page</a> -->
     </div>
 
-    <%- include('partials/navbar_top_searchbar', { back: false }); %>
     <%- include('partials/navbar_bottom', { active: 1 }); %>
     
     <%- include('partials/scripts'); %>

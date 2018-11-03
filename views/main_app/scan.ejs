@@ -6,10 +6,11 @@
 </head>
 
 <body>
+        <%- include('partials/navbar_top_title', { title: 'Scan', back: false }); %>
 
     <div class="fullpage-center">
         <div class="text-center">
-            <i class="fas fa-tag icon-huge mb-4 "></i>
+            <i class="fas fa-tag icon-huge mb-4" aria-hidden="true"></i>
             <h1>Scanning...</h1>
             <p>Hold your phone close to a Clothesee tag<br>on your clothes to see information.</p>
         </div>
@@ -74,7 +75,6 @@
         </div>
     </div> -->
 
-    <%- include('partials/navbar_top_title', { title: 'Scan', back: false }); %>
     <%- include('partials/navbar_bottom', { active: 2 }); %>
 
     <%- include('partials/scripts'); %>

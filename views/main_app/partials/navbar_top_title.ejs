@@ -1,15 +1,15 @@
 <nav class="navbar fixed-top navbar-dark bg-dark">
-    <div class="col-2">
+    <div class="col-8 text-center order-2">
+        <a href="#" class="navbar-brand" role="alert">
+            <%= title %>
+        </a>
+    </div>
+    <div class="col-2 order-1">
         <% if (locals.back !== false) { %>
             <a href="#" class="navbar-brand " onclick="history.go(-1)">‹ Back</a>
         <% } %>
     </div>
-    <div class="col-8 text-center">
-        <a href="#" class="navbar-brand">
-            <%= title %>
-        </a>
-    </div>
-    <div class="col-2">
+    <div class="col-2 order-3">
         <% if (locals.icon === true) { %>
         <a href="#" class="navbar-brand">
             <i class="fas fa-list" aria-label="pick up list, 0 items"></i>

@@ -3,18 +3,22 @@
 
 <head>
     <%- include('partials/head'); %>
+    <meta http-equiv="refresh" content="2;url=/pickup_done" />
 </head>
 
 <body>
-        <%- include('partials/navbar_top_title', { title: 'Waiting to Hang', icon: false }); %>
+        <%- include('partials/navbar_top_title', { title: 'Scan', back: false }); %>
 
     <div class="fullpage-center">
         <div class="text-center">
-            <i class="fas fa-tshirt icon-huge mb-4 "></i>
-            <p>Please hang your clothes on the smart closet.</p>
+            <i class="fas fa-circle-notch fa-spin icon-huge mb-4 " aria-hidden="true"></i>
+            <h1 role="alert">Picking Up 1 item...</h1>
+            <p>Please wait while we pop up your clothes<br>from the closet</p>
+
             <br>
             <br>
-            <a href="/scan" class="btn btn-primary btn-block">Not now</a>
+
+            <a href="#" class="btn btn-primary btn-block" onclick="history.go(-1)">Cancel</a>
         </div>
     </div>
 
@@ -45,9 +49,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="info-modal-label" aria-hidden="true">
+    <!-- <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="info-modal-label" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -82,8 +86,8 @@
     <%- include('partials/scripts'); %>
 
     <script>
-        function onHanged (info) {
-            window.location.href = '/scan_received'
+        function onScanned (info) {
+            window.location.href = '/scan_result'
         }
 
         // $(function () {

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head'); %>
+</head>
+
+<body>
+    <%- include('partials/navbar_top_title', { title: 'Clothes Details', back: true, icon: true }); %>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col-10">
+                        <h2>Striped Black/White Tee</h2>
+                        <p>Casual, Short-sleeved, Crew-neck T-shirt from H&amp;M</p>
+                    </div>
+                    <div class="col-2">
+                        <%- include('fav_toggle', { favorite: locals.favorite }); %>
+                    </div>
+                </div>
+                
+                <p>This piece of clothes is on the Wardrobe</p>
+                
+                <hr>
+
+                <a href="#" class="btn btn-primary btn-block popup" data-popup-msg="Please say what you want to know about this clothes.">
+                <i class="fas fa-microphone"></i> Ask About Tag Information</a>
+                <a href="#" class="btn btn-primary btn-block popup" data-popup-msg="Select sharing option">Get Opinion from Others</a>
+                <a href="/pickup" class="btn btn-primary btn-block">Pick Up Now</a>
+                <hr>
+
+                <img src="https://factory.jcrew.com/s7-img-facade/C2491_KE3834_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636"
+                    class="img-fluid" alt="Image: Striped Black/White Tee from H&amp;M">
+
+                <div class="row">
+                    <div class="col-9">
+                        <div class="note">
+                            <i aria-hidden="true" class="fas fa-tag"></i> Tags:
+                            <br>
+                            <a href="#" class="badge badge-secondary">Casual</a>,
+                            <a href="#" class="badge badge-secondary">Summer</a>
+                        </div>
+                        <div class="note">
+                            <i aria-hidden="true" class="fas fa-sticky-note"></i> Note:
+                            <br> A gift from mom, Christmas 2017</div>
+                    </div>
+                    <div class="col-3">
+                        <a href="#">Edit Tag or Note</a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h3>Details</h3>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Description</th>
+                            <td>Short-sleeved Crew-neck T-shirt</td>
+                        </tr>
+                        <tr>
+                            <th>Brand</th>
+                            <td>H&amp;M</td>
+                        </tr>
+                        <tr>
+                            <th>Size</th>
+                            <td>L</td>
+                        </tr>
+                        <tr>
+                            <th>Pattern/Color</th>
+                            <td>Striped Black/White</td>
+                        </tr>
+                        <tr>
+                            <th>Style</th>
+                            <td>Casual</td>
+                        </tr>
+                        <tr>
+                            <th>Care Instructions</th>
+                            <td>
+                                Machine Wash Cold with Like Color
+                                <br> Tumble Dry
+                                <br> Low Heat Iron
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Material</th>
+                            <td>100% Cotton</td>
+                        </tr>
+                        <tr>
+                            <th>Made in</th>
+                            <td>USA</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="scan-modal" tabindex="-1" role="dialog" aria-labelledby="scan-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scan-modal-label">Tag Scanned!:
+                        <span class="scan-result"></span>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card bg-light">
+                        <div class="card-body scan-result text-center" role="alert">
+
+                        </div>
+                    </div>
+                    <hr>
+                    <button type="button" id="more-info" class="btn btn-primary btn-block btn-lg">Ask for information</button>
+                    <a href="/1a_add_to_closet" class="btn btn-primary btn-block btn-lg">Add to closet</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="info-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="info-modal-label">Ask what you want to know about this clothes</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        [MIC ICON]
+                    </div>
+                    <div class="card bg-light">
+                        <div class="card-body scan-result" role="alert">
+
+                        </div>
+                    </div>
+                    <hr>
+                    <button type="buton" class="btn btn-primary btn-block btn-lg">What's the brand</button>
+                    <button type="buton" class="btn btn-primary btn-block btn-lg">What's the style</button>
+                    <button type="buton" class="btn btn-primary btn-block btn-lg">Laundry information</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    
+        <%- include('partials/navbar_bottom', { active: 2 }); %>
+
+            <%- include('partials/scripts'); %>
+
+                <script>
+                    function onScanned(info) {
+                        window.location.href = '/scan_result'
+                    }
+
+        // $(function () {
+        //     $('#more-info').click(function () {
+        //         $('#info-modal').modal('show')
+        //     })
+        // })
+                </script>
+</body>
+
+</html>

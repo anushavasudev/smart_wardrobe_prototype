@@ -89,6 +89,29 @@ $(function () {
             }
         }
     })
+
+
+    $('.fav-toggle').each(function () {
+        if($(this).attr('aria-checked') == 'true') {
+            $(this).find('.fav-toggle-on').show();
+            $(this).find('.fav-toggle-off').hide();
+        } else {
+            $(this).find('.fav-toggle-on').hide();
+            $(this).find('.fav-toggle-off').show();
+        }
+    })
+    $('.fav-toggle').click(function () {
+        console.log($(this).attr('aria-checked'))
+        if($(this).attr('aria-checked') == 'true') {
+            $(this).attr('aria-checked', 'false');
+            $(this).find('.fav-toggle-on').hide();
+            $(this).find('.fav-toggle-off').show();
+        } else {
+            $(this).attr('aria-checked', 'true');
+            $(this).find('.fav-toggle-on').show();
+            $(this).find('.fav-toggle-off').hide();
+        }
+    })
 })
 
 

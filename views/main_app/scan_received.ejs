@@ -6,6 +6,7 @@
 </head>
 
 <body>
+        <%- include('partials/navbar_top_title', { title: 'Clothes Received!', icon: false }); %>
 
     <div class="fullpage-center">
         <div class="text-center">
@@ -18,17 +19,16 @@
         </div>
     </div>
 
-    <%- include('partials/navbar_top_title', { title: 'Clothes Received!', icon: false }); %>
     <%- include('partials/navbar_bottom', { active: 2 }); %>
 
     <%- include('partials/scripts'); %>
 
     <script>
-        $(function () {
-            $('#more-info').click(function () {
-                $('#info-modal').modal('show')
-            })
-        })
+        // $(function () {
+        //     $('#more-info').click(function () {
+        //         $('#info-modal').modal('show')
+        //     })
+        // })
     </script>
 </body>
 

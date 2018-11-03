@@ -6,6 +6,7 @@
 </head>
 
 <body>
+        <%- include('partials/navbar_top_title', { title: 'Tag Scanned', icon: false }); %>
 
     <div class="container-fluid">
         <div class="row">
@@ -14,28 +15,49 @@
                 <hr>
                 <p>Striped Black/White Short-sleeved Crew-neck T-shirt from H&amp;M</p>
                 <hr>
-                <a href="#" class="btn btn-primary btn-block">
+                <a href="#" class="btn btn-primary btn-block popup" data-popup-msg="Select sharing option">
                     <i class="fas fa-microphone"></i> Ask for specific tag information</a>
-                <a href="#" class="btn btn-primary btn-block" id="add-to-clothes-list">
+                <a href="#" class="btn btn-primary btn-block popup" id="add-to-clothes-list" data-popup-msg="Item added to your clothes list.">
                     <i class="fas fa-plus"></i> Add to my clothes list</a>
                 <hr>
+                <h3>Details</h3>
                 <table class="table">
                     <tbody>
                         <tr>
-                            <td>Type?</td>
+                            <th>Description</th>
                             <td>Short-sleeved Crew-neck T-shirt</td>
                         </tr>
                         <tr>
-                            <td>Material</td>
-                            <td>100% Cotton</td>
+                            <th>Brand</th>
+                            <td>H&amp;M</td>
                         </tr>
                         <tr>
-                            <td>Pattern/Color</td>
+                            <th>Size</th>
+                            <td>L</td>
+                        </tr>
+                        <tr>
+                            <th>Pattern/Color</th>
                             <td>Striped Black/White</td>
                         </tr>
                         <tr>
-                            <td>Style</td>
+                            <th>Style</th>
                             <td>Casual</td>
+                        </tr>
+                        <tr>
+                            <th>Care Instructions</th>
+                            <td>
+                                Machine Wash Cold with Like Color
+                                <br> Tumble Dry
+                                <br> Low Heat Iron
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Material</th>
+                            <td>100% Cotton</td>
+                        </tr>
+                        <tr>
+                            <th>Made in</th>
+                            <td>USA</td>
                         </tr>
                     </tbody>
                 </table>
@@ -45,7 +67,6 @@
         </div>
     </div>
 
-    <%- include('partials/navbar_top_title', { title: 'Scanning Tag...', icon: false }); %>
         <%- include('partials/navbar_bottom', { active: 2 }); %>
 
             <%- include('partials/scripts'); %>
