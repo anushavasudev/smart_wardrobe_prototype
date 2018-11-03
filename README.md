@@ -24,7 +24,7 @@ Team TAXY for CS 6755 @ Georgia Tech
 ## The way I organize code
 - I write page-specific JS in a `<script>` tag in that page while common code goes in `/public/js/app_common.js`
 - CSS is centralized. Don't use inline CSS as it can be hard to change
-- Bootstrap have vey useful classes for spacing. Check them out here: https://getbootstrap.com/docs/4.0/utilities/spacing/
+- Bootstrap have very useful classes for spacing. Try to use them instead of coding spacings manually in CSS (as CSS can get messy by all the spacing classes). Check them out here: https://getbootstrap.com/docs/4.0/utilities/spacing/
 
 ## Quick EJS Brief
 - What EJS is for HTML is like what PHP is for HTML. They both inject some logic codes into HTML itself.
