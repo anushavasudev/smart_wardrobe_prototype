@@ -7,7 +7,7 @@
 
 <body>
 
-        <%- include('partials/navbar_top_title', { title: 'Combo Details', back: true, icon: true }); %>
+        <%- include('partials/navbar_top_title', { title: 'Combination Details', back: true, icon: true }); %>
 
     <div class="container">
         <div class="row">
@@ -15,15 +15,15 @@
                 <div class="row">
                     <div class="col-10">
                         <h2>Striped T-Shirt + Blue Jeans</h2>
-                        <p>2-piece combo</p>
+                        <p>2-piece Combination</p>
                     </div>
                     <div class="col-2">
-                        <%- include('fav_toggle', { favorite: locals.favorite }); %>
+                        <%- include('partials/fav_toggle', { favorite: locals.favorite }); %>
                     </div>
                 </div>
 
                 <div class="note"><i aria-hidden="true" class="fas fa-tag"></i> Tags: <a href="#" class="badge badge-secondary">Casual</a>, <a href="#" class="badge badge-secondary">Summer</a></div>
-                <div class="note"><i aria-hidden="true" class="fas fa-sticky-note"></i> Note: My favorite outgoing combo!</div>
+                <div class="note"><i aria-hidden="true" class="fas fa-sticky-note"></i> Note: My fav outgoing combo!</div>
                 <a href="#">Edit Tag or Note</a>
                 <hr>
 

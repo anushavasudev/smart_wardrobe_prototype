@@ -47,9 +47,9 @@ $(function () {
 
     socket.on('woz_action', function (msg) {
         // alert(msg)
-        
+
         if (msg.action === 'scan') {
-            
+
             if (typeof onScanned === "function") {
                 window.navigator.vibrate(200);
                 onScanned(clothesData[+msg.data.clothes_id])
@@ -70,7 +70,7 @@ $(function () {
             // elem.text('Clothes scanned:' + )
             // $('#content').append(elem)
         }
-    
+
         if (msg.action === 'reset') {
             console.log('resetting')
             window.location.href = '/'
@@ -84,7 +84,7 @@ $(function () {
         if (msg.action === 'hang') {
             console.log('hanged')
             if (typeof onHanged === "function") {
-                window.navigator.vibrate([100,50,100]);
+                window.navigator.vibrate([100, 50, 100]);
                 onHanged(clothesData[+msg.data.clothes_id])
             }
         }
@@ -92,7 +92,7 @@ $(function () {
 
 
     $('.fav-toggle').each(function () {
-        if($(this).attr('aria-checked') == 'true') {
+        if ($(this).attr('aria-checked') == 'true') {
             $(this).find('.fav-toggle-on').show();
             $(this).find('.fav-toggle-off').hide();
         } else {
@@ -102,7 +102,7 @@ $(function () {
     })
     $('.fav-toggle').click(function () {
         console.log($(this).attr('aria-checked'))
-        if($(this).attr('aria-checked') == 'true') {
+        if ($(this).attr('aria-checked') == 'true') {
             $(this).attr('aria-checked', 'false');
             $(this).find('.fav-toggle-on').hide();
             $(this).find('.fav-toggle-off').show();
@@ -116,7 +116,7 @@ $(function () {
 
 
 
-function clothesDataToWord (d) {
+function clothesDataToWord(d) {
     var outString = ''
     outString += d.color + ' ' + d.type + ' from ' + d.brand + '.<br>'
     outString += 'Size: ' + d.size + '.<br>'
@@ -125,14 +125,14 @@ function clothesDataToWord (d) {
 }
 
 
-function clothesDataToSummary (d) {
+function clothesDataToSummary(d) {
     var outString = 'This is a '
     outString += d.color + ' ' + d.type + ' from ' + d.brand + '.<br>'
     return outString
 }
 
 
-function isScanEnabled () {
+function isScanEnabled() {
     var attr = $('body').attr('enable-scan')
     return typeof attr !== typeof undefined && attr !== false
 }
@@ -140,7 +140,7 @@ function isScanEnabled () {
 
 
 // Find the right method, call on correct element
-function launchIntoFullscreen (element) {
+function launchIntoFullscreen(element) {
     if (element.requestFullscreen) {
         element.requestFullscreen()
     } else if (element.mozRequestFullScreen) {
@@ -153,9 +153,25 @@ function launchIntoFullscreen (element) {
 }
 
 
-function getToggleValue (callback) {
+function getToggleValue(callback) {
     socket.emit('woz_toggle_query')
     socket.on('woz_toggle_query_answer', function (msg) {
         callback(msg)
     })
+}
+
+
+function displayToast(message, duration = 3000, alertType = 'secondary') {
+    var alertElem = $(`<div class="alert alert-${alertType} toast" role="alert">`)
+    alertElem.text(message)
+    console.log(alertElem)
+    $('body').append(alertElem)
+    alertElem.addClass('show')
+
+    setTimeout(function () { 
+        alertElem.removeClass('show')
+        setTimeout(function () { 
+            alertElem.remove()
+        }, 1000)
+    }, duration)
 }

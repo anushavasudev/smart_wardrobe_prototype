@@ -11,13 +11,23 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1>Your Clothes</h1>
-                <h2>Clothes in the wardrobe</h2>
+                <h1>My Clothes</h1>
+                <div class="my-3 btn-group btn-group-fullwidth" role="group" aria-label="Basic example">
+                    <a href="#" class="btn btn-primary" role="switch" aria-checked="true">Only in the wardrobe</a>
+                    <a href="#" class="btn btn-outline-dark" role="switch" aria-checked="false">All clothes</a>
+                </div>
+                <hr>
+                <h2><i class="fas fa-tshirt" aria-hidden="true"></i> Tops</h2>
                 <%- include('partials/clothes_card', { title: 'Favorites' }); %>
                 <%- include('partials/clothes_card', { title: 'Favorites' }); %>
                 <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                <h2>Other Clothes</h2>
+                <hr>
+                <h2><i class="fas fa-tshirt" aria-hidden="true"></i> Bottoms</h2>
                 <%- include('partials/clothes_card', { title: 'Favorites' }); %>
+                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
+                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
+                <hr>
+                <h2><i class="fas fa-tshirt" aria-hidden="true"></i> Formal</h2>
                 <%- include('partials/clothes_card', { title: 'Favorites' }); %>
                 <%- include('partials/clothes_card', { title: 'Favorites' }); %>
                 <!-- <a href="/1a_add_details" class="btn btn-lg btn-primary">add details</a> -->
@@ -29,6 +39,7 @@
     <%- include('partials/navbar_bottom', { active: 1 }); %>
     
     <%- include('partials/scripts'); %>
+    <!-- <%- include('partials/alert_dialog'); %> -->
 </body>
 
 </html>
