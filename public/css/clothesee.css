@@ -35,6 +35,15 @@ body {
     flex: 1;
 }
 
+.btn-primary {
+    color: #333;
+    background-color: #E2D1C3;
+    border-color: #E2D1C3;
+}
+.btn-outline-dark {
+    border-color: #E2D1C3;
+}
+
 .navbar-brand.iconset.active {
     color: #0088ff;
 }
@@ -94,12 +103,17 @@ body {
     to {bottom: 0; opacity: 0;}
 }
 
+.fa-star {
+    color: #E2D1C3;
+}
+
 
 img.icon {
-    height: 24pt;
+    height: 42pt;
     vertical-align: middle;
+    padding: 12pt 12pt;
 }
 
 img.icon.icon-lg {
-    height: 36pt;
+    padding: 5pt;
 }
