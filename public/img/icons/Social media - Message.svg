@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="82px" height="82px" viewBox="0 0 82 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="60" height="60" rx="14.4"></rect>
+        <filter x="-29.2%" y="-25.8%" width="158.3%" height="158.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.827115221   0 0 0 0 0.782199892   0 0 0 0 0.765564586  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50.7936478%" y1="93.361933%" x2="50.7936478%" y2="12.4104664%" id="linearGradient-3">
+            <stop stop-color="#0CBD2A" offset="0%"></stop>
+            <stop stop-color="#5BF675" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-451.000000, -45.000000)" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(462.000000, 54.000000)">
+                <g id="icon-border">
+                    <g>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+                <g id="Group">
+                    <rect id="rect826" fill="url(#linearGradient-3)" x="0.288115246" y="0.288115246" width="59.5550744" height="59.5550744" rx="13.1162953"></rect>
+                    <path d="M30.0656525,10.5976531 C17.9932688,10.597733 8.20669613,18.7492863 8.20661435,28.8047539 C8.21736051,35.1934948 12.2474811,41.1101298 18.8260291,44.3951561 C17.9646361,46.3235925 16.6727297,48.1319495 15.003804,49.7453481 C18.2402491,49.1772057 21.2783675,47.9836749 23.8816972,46.2576501 C25.8890029,46.7544737 27.9716029,47.0084738 30.0656525,47.0118637 C42.1380407,47.0117842 51.9246156,38.8602252 51.9246914,28.8047539 C51.9246096,18.7492861 42.1380365,10.5977326 30.0656525,10.5976531 Z" id="path922" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

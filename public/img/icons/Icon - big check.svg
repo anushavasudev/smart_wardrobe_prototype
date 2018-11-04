@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="115px" viewBox="0 0 150 115" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon - big check</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M131.616609,1.96099353 C129.463725,-0.197197759 125.875885,-0.197197759 123.578967,1.96099353 L56.4025266,71.5336498 C54.9240455,72.9595494 53.5505612,73.0652549 52.0079153,71.5372483 L24.2577889,44.1181432 C22.104905,41.9599519 18.5166155,41.9599519 16.2205949,44.1181432 L1.86743712,58.3627454 C-0.285446809,60.5213865 -0.285446809,64.1180721 1.86743712,66.2767132 L48.6702128,112.204625 C52.6595745,115.798611 56.6489362,115.798611 61.037234,111.805556 L147.83548,26.1333657 C149.988364,23.8307852 149.988364,20.2336498 147.83548,18.0759083 L131.616609,1.96099353 Z" id="path-1"></path>
+        <filter x="-8.7%" y="-9.6%" width="117.4%" height="122.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.142917799 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Icon---big-check" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <g id="Group-8" transform="translate(0.000000, 15.173611)"></g>
+            <g id="Fill-4">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#E2D1C3" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <path d="M147.794917,26.173084 C149.947801,24.0148927 150.028119,20.2630224 147.835301,18.0760432 L145.341401,15.5980366 L56.8636153,102.768633 C55.3178285,104.175641 53.3978222,104.175641 51.8112033,102.810466 L4.0641146,56.1830982 L1.90629492,58.3246465 C-0.288767221,60.5080271 -0.319279124,64.0655792 1.89507731,66.303387 L48.3135521,111.921829 C52.3698403,115.834732 56.5970849,115.865769 60.7942663,112.126943 L147.794917,26.173084 Z" id="Fill-6" fill="#D8C0AD"></path>
+        </g>
+    </g>
+</svg>

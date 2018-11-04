@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Card/icon/add a tag</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Card/icon/add-a-tag" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(1.000000, 1.000000)" fill-rule="nonzero" stroke="#795548" stroke-width="1.8">
+            <path d="M1.70212766,2.52272727 C0.612765957,2.52272727 0,3.23863636 0,4.22727273 C0,4.60227273 0.136170213,8.42045455 0.136170213,8.72727273 C0.204255319,9.54545455 0.476595745,10.0227273 1.0212766,10.5681818 C1.25957447,10.8409091 7.31914894,16.9090909 7.55744681,17.1818182 C8.44255319,18 9.42978723,18.3068182 10.3829787,17.5568182 C10.8255319,17.1818182 14.7044851,13.2919901 14.8765957,13.0909091 C15.4893617,12.375 15.8297872,11.1477273 14.6382979,10.0909091 C14.2638298,9.72585227 8.5787234,3.98863636 8.03404255,3.44318182 C7.4893617,2.93181818 7.11489362,2.72727273 6.19574468,2.65909091 C5.58297872,2.65909091 1.83829787,2.52272727 1.70212766,2.52272727 Z" id="Path-2"></path>
+            <ellipse id="Oval" cx="4.2893617" cy="6.81818182" rx="1.77021277" ry="1.77272727"></ellipse>
+            <path d="M11.2340426,2.38636364 L16,2.38636364" id="Line" stroke-linecap="round"></path>
+            <path d="M13.617118,0 L13.617118,4.77272727" id="Line" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg>

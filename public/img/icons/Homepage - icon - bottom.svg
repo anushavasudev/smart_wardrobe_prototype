@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="32px" viewBox="0 0 40 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="115.827481%" y1="54.9766827%" x2="-8.49937556%" y2="54.9766827%" id="linearGradient-1">
+            <stop stop-color="#9E786A" offset="0%"></stop>
+            <stop stop-color="#B0957E" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage/bottom" fill="url(#linearGradient-1)">
+            <path d="M38.104775,0.671481128 C38.0628406,0.28932565 37.7400175,0 37.3553773,0 L20,0 L2.6446227,0 C2.25998248,0 1.93715944,0.28932565 1.89522498,0.671481128 L0.0045592257,31.1648928 C-0.0442438099,31.6109816 0.304969023,32 0.753956951,32 L17.4387444,32 C17.8237461,32 18.1469307,31.7106743 18.1885036,31.3281577 L19.2506023,21.5647715 C19.3482083,20.6686205 20.6521532,20.6686205 20.7493977,21.5647715 L21.8118579,31.3281577 C21.8530693,31.7106743 22.1762539,32 22.5612556,32 L39.246043,32 C39.695031,32 40.0442438,31.6109816 39.9954408,31.1648928 L38.104775,0.671481128 Z" id="Fill-3"></path>
+        </g>
+    </g>
+</svg>

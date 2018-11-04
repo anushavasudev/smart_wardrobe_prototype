@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="82px" height="82px" viewBox="0 0 82 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="60" height="60" rx="14.4"></rect>
+        <filter x="-29.2%" y="-25.8%" width="158.3%" height="158.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.827115221   0 0 0 0 0.782199892   0 0 0 0 0.765564586  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="0" y="0" width="60" height="60" rx="14.4"></rect>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-677.000000, -46.000000)">
+            <g id="Group-3" transform="translate(688.000000, 55.000000)">
+                <g id="icon-border" fill-rule="nonzero">
+                    <g>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+                <g id="slack-tile"></g>
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <use id="icon-border" fill="#FFFFFF" fill-rule="nonzero" xlink:href="#path-3"></use>
+                <g id="Group" mask="url(#mask-4)" fill-rule="nonzero">
+                    <polygon id="Shape" fill="#167E67" points="1.875 0 7.734375 18.28125 0 20.7421875 0 0"></polygon>
+                    <polygon id="Shape" fill="#F7FAFA" points="7.734375 18.28125 18.75 51.2109375 50.9765625 40.6640625 40.546875 7.96875"></polygon>
+                    <polygon id="Shape" fill="#8BD2DE" points="1.875 0.1171875 7.734375 18.28125 40.546875 7.96875 37.96875 0"></polygon>
+                    <polygon id="Shape" fill="#829D34" points="37.96875 0 40.546875 7.96875 60 1.9921875 59.8828125 0"></polygon>
+                    <polygon id="Shape" fill="#47AF87" points="0 57.0703125 0 20.7421875 7.734375 18.28125 18.75 51.2109375"></polygon>
+                    <polygon id="Shape" fill="#E9AB1F" points="50.9765625 40.6640625 40.546875 7.96875 60 1.9921875 60 37.734375"></polygon>
+                    <polygon id="Shape" fill="#C51012" points="57.421875 60 50.9765625 40.6640625 60 37.734375 60 60"></polygon>
+                    <polygon id="Shape" fill="#190319" points="0 60 0 57.0703125 18.75 51.2109375 21.6796875 60"></polygon>
+                    <polygon id="Shape" fill="#D41439" points="21.6796875 60 18.75 51.2109375 50.9765625 40.6640625 57.421875 60"></polygon>
+                    <path d="M21.5625,25.6640625 C21.5625,21.5625 24.609375,18.75 30,18.75 C33.28125,18.75 35.9765625,19.8046875 37.3828125,20.859375 C37.6171875,20.9765625 37.96875,21.328125 37.734375,21.9140625 C37.5,22.734375 36.9140625,23.7890625 36.5625,24.4921875 C36.328125,24.84375 35.859375,24.84375 35.5078125,24.609375 C34.453125,24.140625 32.8125,23.203125 31.171875,23.0859375 L30,22.96875 C28.59375,23.0859375 27.5390625,23.5546875 27.0703125,24.609375 L26.953125,25.1953125 C26.953125,26.6015625 28.828125,27.0703125 31.171875,27.5390625 C35.5078125,28.2421875 38.7890625,29.53125 38.7890625,33.984375 C38.7890625,37.734375 35.7421875,41.25 29.8828125,41.1328125 C26.015625,41.015625 23.203125,39.7265625 21.6796875,38.4375 C21.6796875,38.4375 21.09375,37.8515625 21.4453125,37.1484375 C21.796875,36.2109375 22.3828125,35.2734375 22.8515625,34.6875 C23.0859375,34.3359375 23.7890625,34.21875 24.140625,34.453125 C25.9317254,35.7179808 28.0446032,36.4493616 30.234375,36.5625 C32.2265625,36.4453125 33.515625,35.7421875 33.515625,34.3359375 C33.515625,33.1640625 31.875,32.578125 29.1796875,31.9921875 C24.9609375,31.2890625 21.5625,29.8828125 21.5625,25.6640625" id="Shape" fill="#111111"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

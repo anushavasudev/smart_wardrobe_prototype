@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="22px" viewBox="0 0 18 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>NavigationIcon/scan/unselected</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="NavigationIcon/scan/unselected" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Scan/unselected" stroke="#795548" stroke-width="2.016">
+            <rect id="Rectangle" x="1.008" y="1.008" width="15.984" height="19.984" rx="3.024"></rect>
+            <path d="M1.42219286,16.1420118 L18,16.1420118" id="Path-2"></path>
+        </g>
+    </g>
+</svg>
