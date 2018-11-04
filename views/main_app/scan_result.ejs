@@ -6,73 +6,116 @@
 </head>
 
 <body>
-        <%- include('partials/navbar_top_title', { title: 'Tag Scanned', icon: false }); %>
+    <%- include('partials/navbar_top_title', { title: 'Tag Scanned', icon: false }); %>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <h1 role="alert">Striped Black/White T-Shirt from H&amp;M</h1>
-                <hr>
-                <p>Striped Black/White Short-sleeved Crew-neck T-shirt from H&amp;M</p>
-                <hr>
-                <a href="#" class="btn btn-primary btn-block popup" data-popup-msg="Select sharing option">
-                    <i class="fas fa-microphone"></i> Ask for specific tag information</a>
-                <a href="#" class="btn btn-primary btn-block popup" id="add-to-clothes-list" data-popup-msg="Item added to your clothes list.">
-                    <i class="fas fa-plus"></i> Add to my clothes list</a>
-                <hr>
-                <h3>Details</h3>
-                <table class="table">
-                    <tbody>
-                        <tr>
-                            <th>Description</th>
-                            <td>Short-sleeved Crew-neck T-shirt</td>
-                        </tr>
-                        <tr>
-                            <th>Brand</th>
-                            <td>H&amp;M</td>
-                        </tr>
-                        <tr>
-                            <th>Size</th>
-                            <td>L</td>
-                        </tr>
-                        <tr>
-                            <th>Pattern/Color</th>
-                            <td>Striped Black/White</td>
-                        </tr>
-                        <tr>
-                            <th>Style</th>
-                            <td>Casual</td>
-                        </tr>
-                        <tr>
-                            <th>Care Instructions</th>
-                            <td>
-                                Machine Wash Cold with Like Color
-                                <br> Tumble Dry
-                                <br> Low Heat Iron
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Material</th>
-                            <td>100% Cotton</td>
-                        </tr>
-                        <tr>
-                            <th>Made in</th>
-                            <td>USA</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <a href="#" class="btn btn-outline-danger btn-block">
-                    <i class="fas fa-trash"></i> Remove from my clothes list</a>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img class="img-fluid" src="/img/photos/Item - dress shirt@2x.jpg" alt="White dress shirt from Arrow">
+                </div>
             </div>
+
+            <div class="row">
+                <div class="col-10">
+                    <h1>White Dress Shirt</h1>
+                </div>
+                <div class="col-2">
+                    <%- include('partials/fav_toggle', { favorite: locals.favorite }); %>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <p>
+                        Formal long-sleeved white dress shirt
+                        <br>56% Cotton, 44% Modal
+                        <br>From H&amp;M
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>This item is in the wardrobe</p>
+                    <a href="#" class="btn btn-primary btn-lg btn-block popup" data-popup-msg="Please say what you want to know about this clothes.">
+                        <i class="fas fa-microphone mr-4" aria-hidden="true"></i> Ask About Tag Information</a>
+                    <a href="/pickup" class="btn btn-primary btn-block btn-lg ">
+                        <i class="fas fa-plus mr-4" aria-hidden="true"></i> Add to my clothes list</a>
+                    <!-- <a href="#" class="btn btn-primary btn-lg btn-block popup" data-popup-msg="Select sharing option">Get Opinion from Others</a> -->
+                </div>
+            </div>
+
+
+            <hr>
+            <div class="row">
+                <div class="col-9">
+                    <h2>Notes</h2>
+                    <div class="note">
+                        <i aria-hidden="true" class="fas fa-tag"></i> Tags:
+                        <br>
+                        <a href="#" class="badge badge-secondary">Formal</a>,
+                        <a href="#" class="badge badge-secondary">Business</a>
+                    </div>
+                    <hr>
+                    <div class="note">
+                        <i aria-hidden="true" class="fas fa-sticky-note"></i> Note:
+                        <br> A gift from mom, Christmas 2017</div>
+                </div>
+                <div class="col-3">
+                    <a href="#">Edit Tag or Note</a>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2>Details</h2>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Description</th>
+                        <td>long-sleeve white dress shirt</td>
+                    </tr>
+                    <tr>
+                        <th>Brand</th>
+                        <td>Arrow</td>
+                    </tr>
+                    <tr>
+                        <th>Size</th>
+                        <td>L</td>
+                    </tr>
+                    <tr>
+                        <th>Pattern/Color</th>
+                        <td>Plain white</td>
+                    </tr>
+                    <tr>
+                        <th>Style</th>
+                        <td>Formal</td>
+                    </tr>
+                    <tr>
+                        <th>Care Instructions</th>
+                        <td>
+                            Machine Wash Cold with Like Color
+                            <br> Tumble Dry
+                            <br> Low Heat Iron
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Material</th>
+                        <td>100% Cotton</td>
+                    </tr>
+                    <tr>
+                        <th>Made in</th>
+                        <td>USA</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </div>
 
         <%- include('partials/navbar_bottom', { active: 2 }); %>
 
             <%- include('partials/scripts'); %>
 
                 <script>
-                    function onScanned (info) {
+                    function onScanned(info) {
                         window.location.href = '/scan_result'
                     }
 

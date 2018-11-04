@@ -8,38 +8,99 @@
 <body>
     <%- include('partials/navbar_top_searchbar', { back: false }); %>
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>My Clothes</h1>
-                <div class="my-3 btn-group btn-group-fullwidth" role="group" aria-label="Basic example">
-                    <a href="#" class="btn btn-primary" role="switch" aria-checked="true">Only in the wardrobe</a>
-                    <a href="#" class="btn btn-outline-dark" role="switch" aria-checked="false">All clothes</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>My Clothes</h1>
+                    <hr>
                 </div>
-                <hr>
-                <h2><i class="fas fa-tshirt" aria-hidden="true"></i> Tops</h2>
-                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                <hr>
-                <h2><i class="fas fa-tshirt" aria-hidden="true"></i> Bottoms</h2>
-                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                <hr>
-                <h2><i class="fas fa-tshirt" aria-hidden="true"></i> Formal</h2>
-                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                <!-- <a href="/1a_add_details" class="btn btn-lg btn-primary">add details</a> -->
             </div>
-        </div>
-        <!-- <a href="scan" class="btn btn-primary">Go to scan page</a> -->
-    </div>
 
-    <%- include('partials/navbar_bottom', { active: 1 }); %>
-    
-    <%- include('partials/scripts'); %>
-    <!-- <%- include('partials/alert_dialog'); %> -->
+            <div class="row">
+                <div class="col-6">
+                    <a href="/search_result?q=tops" class="btn btn-outline-dark btn-block btn-lg mb-3">
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="icon" src="/img/icons/Homepage - icon - top.svg" alt="Tops Icon" aria-hidden="true">
+                            </div>
+                            <div class="col-8">
+                                Tops
+                                <br>
+                                <small>2 items</small>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/search_result?q=bottoms" class="btn btn-outline-dark btn-block btn-lg mb-3">
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="icon" src="/img/icons/Homepage - icon - bottom.svg" alt="Bottoms Icon" aria-hidden="true">
+                            </div>
+                            <div class="col-8">
+                                Bottoms
+                                <br>
+                                <small>2 items</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="/search_result?q=full-body" class="btn btn-outline-dark btn-block btn-lg mb-3">
+                        <img class="icon icon-lg my-3" src="/img/icons/Homepage - icon - full body.svg" alt="Full body icon" aria-hidden="true">
+                        <br>Full Body
+                        <br>
+                        <small>0 items</small>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <a href="/search_result?q=formal" class="btn btn-outline-dark btn-block btn-lg mb-3">
+                        <div class="row">
+                            <div class="col-6">
+                                <img class="icon" src="/img/icons/Homepage - icon - formal wear.svg" alt="Formal Icon" aria-hidden="true">
+                            </div>
+                            <div class="col-6 text-left">
+                                Formal
+                                <br>
+                                <small>0 items</small>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/search_result?q=sportswear" class="btn btn-outline-dark btn-block btn-lg mb-3">
+                        <div class="row">
+                            <div class="col-6">
+                                <img class="icon" src="/img/icons/Homepage - icon - sportswear.svg" alt="Sportswear Icon" aria-hidden="true">
+                            </div>
+                            <div class="col-6 text-left">
+                                Sportswear
+                                <br>
+                                <small>0 items</small>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/search_result?q=loungewear" class="btn btn-outline-dark btn-block btn-lg mb-3">
+                        <div class="row">
+                            <div class="col-6">
+                                <img class="icon" src="/img/icons/Homepage - icon - lounge wear.svg" alt="Loungewear Icon" aria-hidden="true">
+                            </div>
+                            <div class="col-6 text-left">
+                                Loungewear
+                                <br>
+                                <small>0 items</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- <a href="scan" class="btn btn-primary">Go to scan page</a> -->
+        </div>
+
+        <%- include('partials/navbar_bottom', { active: 1 }); %>
+
+        <%- include('partials/scripts'); %>
+        <!-- <%- include('partials/alert_dialog'); %> -->
 </body>
 
 </html>

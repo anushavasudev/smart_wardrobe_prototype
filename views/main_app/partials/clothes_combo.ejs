@@ -2,48 +2,25 @@
     <div class="card-body">
         <div class="row">
             <div class="col">
-                <div class="row">
-                    <div class="col-10">
-                        <h3><small>Combination</small><br>Striped T-Shirt + Blue Jeans</h3>
-                    </div>
-                    <div class="col-2">
-                        <%- include('fav_toggle', { favorite: locals.favorite }); %>
-                    </div>
-                </div>
-                <a href="/combo_detail" class="btn btn-primary btn-block">Combination Details</a>
-                <a href="/pickup" class="btn btn-primary btn-block">Pick Up All</a>
-                <div class="mt-3">
-                    <div class="thumbnail" style="background-image: url('https://factory.jcrew.com/s7-img-facade/C2491_KE3834_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636')"></div>
-                    <div class="thumbnail" style="background-image: url('https://factory.jcrew.com/s7-img-facade/C2491_KE3834_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636')"></div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-10">
-                        <h4>Striped Black/White Tee</h4>
-                    </div>
-                    <div class="col-2">
-                        <%- include('fav_toggle', { favorite: locals.favorite }); %>
-                    </div>
-                </div>
-                <p>
-                    from H&amp;M 100% cotton
-                </p>
-                <a href="/clothes_detail" class="btn btn-primary">Details</a>
-                <a href="/pickup" class="btn btn-primary">Pick up now</a>
-                <hr>
-                <div class="row">
-                    <div class="col-10">
-                        <h4>Blue Jeans</h4>
-                    </div>
-                    <div class="col-2">
-                        <%- include('fav_toggle', { favorite: locals.favorite }); %>
-                    </div>
-                </div>
-                <p>
-                    from H&amp;M 100% cotton
-                </p>
-                <a href="/clothes_detail" class="btn btn-primary">Details</a>
-                <a href="/pickup" class="btn btn-primary">Pick up now</a>
+                <div class="thumbnail" style="background-image: url('/img/photos/Item - tshirt@2x.jpg')"></div>
+                <div class="thumbnail" style="background-image: url('/img/photos/Item - short@2x.jpg')"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <h3>
+                    <small>Combination</small>
+                    <br>Striped T-Shirt + <br>Blue Jeans</h3>
+            </div>
+            <div class="col-2">
+                <%- include('fav_toggle', { favorite: locals.favorite }); %>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col">
+                <a href="/pickup" class="btn btn-primary btn-lg">Pick Up All</a>
+                <a href="/combo_detail" class="btn btn-outline-dark btn-lg">Details</a>
             </div>
         </div>
     </div>

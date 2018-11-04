@@ -54,21 +54,6 @@ $(function () {
                 window.navigator.vibrate(200);
                 onScanned(clothesData[+msg.data.clothes_id])
             }
-
-            // console.log(clothesDataToWord(clothesData[+msg.data.clothes_id]))
-
-            // $('#scan-modal .scan-result').html(clothesDataToSummary(clothesData[+msg.data.clothes_id]))
-            // $('#info-modal .scan-result').html(clothesDataToWord(clothesData[+msg.data.clothes_id]))
-            // $('#scan-modal').modal('show')
-
-            // swal( 
-            //     'Tag Scanned!',
-            //     clothesDataToWord(clothesData[+msg.data.clothes_id]),
-            //     'success'
-            // );
-            // var elem = $('<div role="alert">')
-            // elem.text('Clothes scanned:' + )
-            // $('#content').append(elem)
         }
 
         if (msg.action === 'reset') {
@@ -112,6 +97,10 @@ $(function () {
             $(this).find('.fav-toggle-off').hide();
         }
     })
+
+    var query = getUrlParameter('q')
+    $('.query').text(query)
+    $('.query-val').val(query)
 })
 
 
@@ -175,3 +164,18 @@ function displayToast(message, duration = 3000, alertType = 'secondary') {
         }, 1000)
     }, duration)
 }
+
+function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};

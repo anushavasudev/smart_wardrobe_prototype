@@ -4,14 +4,17 @@
             <a href="#" class="navbar-brand navsearch" onclick="history.go(-1)">‹ Back</a>
         </div>
         <div class="col-8">
-            <input class="form-control" type="search" placeholder="Search items or outfits e.g. casual outfit" aria-label="Search your clothes or outfits e.g. casual outfit">
+            <form action="/search_result" method="GET">
+                <input class="form-control query-val" name="q" type="search" placeholder="Search items or outfits e.g. casual outfit" aria-label="Search your clothes or outfits e.g. casual outfit">
+            </form>
         </div>
         <% } else { %>
             <div class="col-10">
                 <form action="/search_result" method="GET">
                     <!-- <div class="input-group"> -->
-                        <input class="form-control" name="q" type="search" placeholder="Search your clothes or outfits e.g. casual outfit" aria-label="Search your clothes or outfits e.g. casual outfit" value="<%= locals.fill ? locals.fill : '' %>">
-                        <!-- <div class="input-group-append">
+                    <input class="form-control query-val" name="q" type="search" placeholder="Search your clothes or outfits e.g. casual outfit"
+                        aria-label="Search your clothes or outfits e.g. casual outfit" value="<%= locals.fill ? locals.fill : '' %>">
+                    <!-- <div class="input-group-append">
                             <button class="btn btn-light" type="submit">
                                 <i class="fas fa-search"></i>
                             </button>
@@ -21,7 +24,7 @@
             </div>
             <% } %>
                 <div class="col-2">
-                    <a href="/pickup_list" class="navbar-brand navsearch">
+                    <a href="/pickup_list" class="navsearch btn btn-light">
                         <i class="fas fa-list" aria-label="2 items in your pick up list"></i>
                         <span class="badge badge-success" aria-hidden="true">2</span>
                     </a>

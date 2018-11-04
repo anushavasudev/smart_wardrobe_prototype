@@ -9,7 +9,7 @@ body {
 }
 
 #bottom-bar {
-    border-top: 1px solid #333;
+    border-top: 5px solid #795548;
 }
 
 .fullpage-center {
@@ -40,9 +40,9 @@ body {
 }
 
 .thumbnail {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    /* border-radius: 50%; */
+    width: 120px;
+    height: 120px;
     background-color: #aaa;
     background-position: center;
     background-size: cover;
@@ -92,4 +92,14 @@ body {
 @keyframes fadeout {
     from {bottom: 80px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
+}
+
+
+img.icon {
+    height: 24pt;
+    vertical-align: middle;
+}
+
+img.icon.icon-lg {
+    height: 36pt;
 }

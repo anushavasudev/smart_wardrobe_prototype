@@ -7,109 +7,31 @@
 
 <body>
 
-        <%- include('partials/navbar_top_title', { title: 'Combination Details', back: true, icon: true }); %>
+    <%- include('partials/navbar_top_title', { title: 'Combination Details', back: true, icon: true }); %>
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="row">
-                    <div class="col-10">
-                        <h2>Striped T-Shirt + Blue Jeans</h2>
-                        <p>2-piece Combination</p>
-                    </div>
-                    <div class="col-2">
-                        <%- include('partials/fav_toggle', { favorite: locals.favorite }); %>
-                    </div>
-                </div>
-
-                <div class="note"><i aria-hidden="true" class="fas fa-tag"></i> Tags: <a href="#" class="badge badge-secondary">Casual</a>, <a href="#" class="badge badge-secondary">Summer</a></div>
-                <div class="note"><i aria-hidden="true" class="fas fa-sticky-note"></i> Note: My fav outgoing combo!</div>
-                <a href="#">Edit Tag or Note</a>
-                <hr>
-
-                <a href="#" class="btn btn-primary btn-block" data-popup-msg="Select sharing option">Get Opinion from Others</a>
-                <a href="/pickup" class="btn btn-primary btn-block">Pick up All</a>
-                
-                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <!-- <div class="modal fade" id="scan-modal" tabindex="-1" role="dialog" aria-labelledby="scan-modal-label" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="scan-modal-label">Tag Scanned!:
-                        <span class="scan-result"></span>
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="card bg-light">
-                        <div class="card-body scan-result text-center" role="alert">
-
-                        </div>
-                    </div>
-                    <hr>
-                    <button type="button" id="more-info" class="btn btn-primary btn-block btn-lg">Ask for information</button>
-                    <a href="/1a_add_to_closet" class="btn btn-primary btn-block btn-lg">Add to closet</a>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>
+                        <small>Combination</small>
+                        <br>Striped Black/White Tee + Brown Shorts</h1>
+                    <ul class="nav nav-tabs nav-justified">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Striped Tee</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Brown Shorts</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div> -->
+        <%- include('clothes_detail'); %>
 
-    <!-- <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="info-modal-label" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="info-modal-label">Ask what you want to know about this clothes</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="text-center">
-                        [MIC ICON]
-                    </div>
-                    <div class="card bg-light">
-                        <div class="card-body scan-result" role="alert">
+            <%- include('partials/navbar_bottom', { active: 1 }); %>
 
-                        </div>
-                    </div>
-                    <hr>
-                    <button type="buton" class="btn btn-primary btn-block btn-lg">What's the brand</button>
-                    <button type="buton" class="btn btn-primary btn-block btn-lg">What's the style</button>
-                    <button type="buton" class="btn btn-primary btn-block btn-lg">Laundry information</button>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
+                <%- include('partials/scripts'); %>
 
-        <%- include('partials/navbar_bottom', { active: 2 }); %>
-
-            <%- include('partials/scripts'); %>
-
-                <script>
-                    function onScanned(info) {
-                        window.location.href = '/scan_result'
-                    }
-
-        // $(function () {
-        //     $('#more-info').click(function () {
-        //         $('#info-modal').modal('show')
-        //     })
-        // })
-                </script>
 </body>
 
 </html>
