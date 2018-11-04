@@ -71,6 +71,12 @@ $(function () {
             if (typeof onHanged === "function") {
                 window.navigator.vibrate([100, 50, 100]);
                 onHanged(clothesData[+msg.data.clothes_id])
+            } else {
+                displayToast(
+                    'We have received your striped T-shirt in the wardrobe.',
+                    3000,
+                    'success'
+                )
             }
         }
     })
@@ -99,8 +105,27 @@ $(function () {
     })
 
     var query = getUrlParameter('q')
-    $('.query').text(query)
+    $('.replace-from-query').each(function () {
+        var key = $(this).data('key')
+        var val = getUrlParameter(key)
+        if (val !== undefined) {
+            console.log($(this).is('input'))
+            if ($(this).is('input'))
+                $(this).val(val)
+            else
+                $(this).text(val)
+        }
+    })
     $('.query-val').val(query)
+
+    $('.toast-trigger').click(function (e) {
+        e.preventDefault()
+        displayToast(
+            $(this).data('toast-message'),
+            $(this).data('toast-duration') || 3000,
+            $(this).data('toast-style') || 'secondary'
+        )
+    })
 })
 
 
@@ -157,9 +182,9 @@ function displayToast(message, duration = 3000, alertType = 'secondary') {
     $('body').append(alertElem)
     alertElem.addClass('show')
 
-    setTimeout(function () { 
+    setTimeout(function () {
         alertElem.removeClass('show')
-        setTimeout(function () { 
+        setTimeout(function () {
             alertElem.remove()
         }, 1000)
     }, duration)

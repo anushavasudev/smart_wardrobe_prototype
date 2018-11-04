@@ -59,12 +59,12 @@ body {
 
 .toast {
     visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     position: fixed;
-    left: 50%;
-    bottom: 80px;
+    bottom: 100px;
     z-index: 5000;
 }
 
@@ -76,21 +76,21 @@ body {
 
 @-webkit-keyframes fadein {
     from {bottom: 0; opacity: 0;} 
-    to {bottom: 80px; opacity: 1;}
+    to {bottom: 100px; opacity: 1;}
 }
 
 @keyframes fadein {
     from {bottom: 0; opacity: 0;}
-    to {bottom: 80px; opacity: 1;}
+    to {bottom: 100px; opacity: 1;}
 }
 
 @-webkit-keyframes fadeout {
-    from {bottom: 80px; opacity: 1;} 
+    from {bottom: 100px; opacity: 1;} 
     to {bottom: 0; opacity: 0;}
 }
 
 @keyframes fadeout {
-    from {bottom: 80px; opacity: 1;}
+    from {bottom: 100px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
 }
 

@@ -1,0 +1,133 @@
+<% if (locals.mode === undefined) mode = 'browse'; // mode = browse | scan %>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img class="img-fluid" src="/img/photos/Item - dress shirt@2x.jpg" alt="White dress shirt from Arrow">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-10">
+                <h1>White Dress Shirt</h1>
+            </div>
+            <div class="col-2">
+                <%- include('fav_toggle', { favorite: locals.favorite }); %>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p>
+                    Formal long-sleeved white dress shirt
+                    <br>56% Cotton, 44% Modal
+                    <br>From H&amp;M
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>This item is in the wardrobe</p>
+                <a href="#" class="btn btn-primary btn-lg btn-block toast-trigger" data-toast-message="Please say what you want to know about this clothes.">
+                    <i class="fas fa-microphone mr-4" aria-hidden="true"></i> Ask About Tag Information</a>
+                <% if (mode == 'browse') { %>
+                    <a href="/pickup" class="btn btn-primary btn-block btn-lg ">
+                        <i class="fas fa-level-up-alt mr-4" aria-hidden="true"></i> Pick Up Now</a>
+                <% } else if (mode == 'scan') { %>
+                    <a href="/pickup" class="btn btn-primary btn-block btn-lg ">
+                        <i class="fas fa-plus mr-4" aria-hidden="true"></i> Add to my clothes list.</a>
+                <% } %>
+                <button class="btn btn-outline-dark btn-lg btn-block toast-trigger" data-toast-message="This button will give you sharing options for messaging apps e.g., WhatsApp, Messenger, to share this clothes with others. Not yet implemented in this prototype." data-toast-style="info">Get Opinion from Others</button>
+            </div>
+        </div>
+
+
+        <hr>
+        <div class="row">
+            <div class="col-10">
+                <h2>Tags &amp; Notes</h2>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-link btn-lg toast-trigger" data-toast-message="This button will allow you to edit tags and notes for this item. Not yet implemented in this prototype."
+                    data-toast-style="info" aria-label="Edit Tag and Notes">
+                    <i class="fas fa-edit"></i>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>
+                                <i aria-hidden="true" class="fas fa-tag"></i>
+                                <b>Tags</b>
+                            </th>
+                            <td>
+                                <a href="#" class="badge badge-lg badge-secondary">Formal</a>,
+                                <a href="#" class="badge badge-secondary">Business</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <i aria-hidden="true" class="fas fa-sticky-note"></i>
+                                <b>Note</b>
+                            </th>
+                            <td> A gift from mom, Christmas 2017</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                    <hr>
+
+                    <h2>Details</h2>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th>Description</th>
+                                <td>long-sleeve white dress shirt</td>
+                            </tr>
+                            <tr>
+                                <th>Brand</th>
+                                <td>Arrow</td>
+                            </tr>
+                            <tr>
+                                <th>Size</th>
+                                <td>L</td>
+                            </tr>
+                            <tr>
+                                <th>Pattern/Color</th>
+                                <td>Plain white</td>
+                            </tr>
+                            <tr>
+                                <th>Style</th>
+                                <td>Formal</td>
+                            </tr>
+                            <tr>
+                                <th>Care Instructions</th>
+                                <td>
+                                    Machine Wash Cold with Like Color
+                                    <br> Tumble Dry
+                                    <br> Low Heat Iron
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Material</th>
+                                <td>100% Cotton</td>
+                            </tr>
+                            <tr>
+                                <th>Made in</th>
+                                <td>USA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <button class="btn btn-outline-dark btn-lg toast-trigger" data-toast-message="This button will remove this item from your list. It wil prompt you to confirm first. Not yet implemented in this prototype">Remove from My Clothes List</button>
+            </div>
+        </div>
+        
+
+    </div>
