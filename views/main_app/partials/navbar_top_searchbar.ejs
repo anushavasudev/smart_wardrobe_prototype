@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-dark bg-dark" aria-label="Search bar">
+<nav class="navbar fixed-top navbar-dark" aria-label="Search bar">
     <% if (locals.back !== false) { %>
         <div class="col-2">
             <a href="#" class="navbar-brand navsearch" onclick="history.go(-1)">‹ Back</a>
@@ -24,7 +24,7 @@
             </div>
             <% } %>
                 <div class="col-2">
-                    <a href="/pickup_list" class="navsearch btn btn-light">
+                    <a href="/pickup_list" class="navsearch btn btn-light nav-btn">
                         <i class="fas fa-list" aria-label="2 items in your pick up list"></i>
                         <span class="badge badge-success" aria-hidden="true">2</span>
                     </a>

@@ -27,6 +27,16 @@ body {
     font-size: 60pt;
 }
 
+.nav-btn {
+    padding: .375rem .20rem;
+}
+
+.btn-light {
+    background-color: #795548;
+    border-color:#795548;
+    color: #FFFFFF;
+}
+
 .btn-group-fullwidth {
     display: flex;
 }
@@ -47,7 +57,12 @@ body {
 .navbar-brand.iconset.active {
     color: #0088ff;
 }
-
+.navbar {
+    background-color: #E2D1C3;    
+}
+.navbar-dark .navbar-brand {
+    color: #333;
+}
 .thumbnail {
     /* border-radius: 50%; */
     width: 120px;
@@ -106,7 +121,9 @@ body {
 .fa-star {
     color: #E2D1C3;
 }
-
+.fa-filter, .fa-tag, .iconset-icon{
+    color: #795548;
+}
 
 img.icon {
     height: 42pt;
@@ -116,4 +133,8 @@ img.icon {
 
 img.icon.icon-lg {
     padding: 5pt;
+}
+
+.form-control {
+    border: 1px solid #D3B8AE;
 }
