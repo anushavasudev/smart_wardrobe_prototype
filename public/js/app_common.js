@@ -126,6 +126,11 @@ $(function () {
             $(this).data('toast-style') || 'secondary'
         )
     })
+
+    $('button.button-link').click(function () {
+        if ($(this).attr('href'))
+            window.location.href = $(this).attr('href')
+    })
 })
 
 

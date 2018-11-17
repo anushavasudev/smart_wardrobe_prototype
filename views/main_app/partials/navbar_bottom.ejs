@@ -1,20 +1,20 @@
-<nav role=”navigation” aria-label="navigation menu" class="navbar fixed-bottom navbar-light bg-light justify-content-between pb-0" id="bottom-bar">
-    <a class="navbar-brand iconset text-center <%= locals.active == 1 ? 'active' : '' %>" href="/home">
+<nav role=”navigation” aria-label="navigation menu" class="fixed-bottom navbar-light bg-light justify-content-between pb-0 bottom-nav" id="bottom-bar">
+    <button class="button-link bottom-nav-item navbar-brand iconset text-center <%= locals.active == 1 ? 'active' : '' %>" href="/home">
         <div class="iconset-icon">
             <i class="fas fa-home"></i>
         </div>
         <div class="iconset-caption">My Clothes</div>
-    </a>
-    <a class="navbar-brand iconset text-center <%= locals.active == 2 ? 'active' : '' %>" href="/scan">
+    </button>
+    <button class="button-link bottom-nav-item navbar-brand iconset text-center <%= locals.active == 2 ? 'active' : '' %>" href="/scan">
         <div class="iconset-icon">
             <i class="fas fa-mobile-alt"></i>
         </div>
         <div class="iconset-caption">Scan</div>
-    </a>
-    <a class="navbar-brand iconset text-center <%= locals.active == 3 ? 'active' : '' %>" href="/favorites">
+    </button>
+    <button class="button-link bottom-nav-item navbar-brand iconset text-center <%= locals.active == 3 ? 'active' : '' %>" href="/favorites">
         <div class="iconset-icon">
             <i class="fas fa-heart"></i>
         </div>
         <div class="iconset-caption">Favorites</div>
-    </a>
+    </button>
 </nav>

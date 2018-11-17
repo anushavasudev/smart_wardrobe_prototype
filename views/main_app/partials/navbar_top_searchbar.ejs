@@ -1,15 +1,15 @@
-<nav class="navbar fixed-top navbar-dark" aria-label="Search bar">
+<nav class="navbar px-0 fixed-top navbar-dark" aria-label="Search bar">
     <% if (locals.back !== false) { %>
-        <div class="col-2">
-            <a href="#" class="navbar-brand navsearch" onclick="history.go(-1)">‹ Back</a>
-        </div>
-        <div class="col-8">
+        <div class="col-6 text-center order-3">
             <form action="/search_result" method="GET">
                 <input class="form-control replace-from-query" data-key="q" name="q" type="search" placeholder="Search items or outfits e.g. casual outfit" aria-label="Search your clothes or outfits e.g. casual outfit">
             </form>
         </div>
+        <div class="col-3 text-center order-1">
+            <button href="#" class="navbar-brand btn btn-link" onclick="history.go(-1)"><i class="fas fa-chevron-left" aria-label="back"></i></button>
+        </div>
         <% } else { %>
-            <div class="col-10">
+            <div class="col-9 text-center order-2">
                 <form action="/search_result" method="GET">
                     <!-- <div class="input-group"> -->
                     <input class="form-control query-val" name="q" type="search" placeholder="Search your clothes or outfits e.g. casual outfit"
@@ -23,10 +23,10 @@
                 </form>
             </div>
             <% } %>
-                <div class="col-2">
-                    <a href="/pickup_list" class="navsearch btn btn-light nav-btn">
+                <div class="col-3 text-center order-3">
+                    <button href="/pickup_list" class="button-link navsearch btn btn-light nav-btn">
                         <i class="fas fa-list" aria-label="2 items in your pick up list"></i>
-                        <span class="badge badge-success" aria-hidden="true">2</span>
-                    </a>
+                        <span class="badge badge-light" aria-hidden="true">2</span>
+                    </button>
                 </div>
 </nav>

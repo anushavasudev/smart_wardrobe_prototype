@@ -24,11 +24,23 @@
                         <a href="#" class="btn btn-primary">Current</a>
                         <a href="#" class="btn btn-outline-dark">History</a>
                     </div> -->
-                    <%- include('partials/clothes_card', { title: 'Favorites' }); %>
-                    <%- include('partials/clothes_card', { title: 'Favorites' }); %>
+                    <%- include('partials/clothes_card', { 
+                        itemName: 'Black & White Striped Tee' ,
+                        image: '/img/photos/Item - tshirt@2x.jpg',
+                        description: 'Striped Black/White Short-sleeved Crew-neck T-shirt',
+                        brand: 'H&M',
+                        tags: 'casual, tops'
+                    }); %>
+                    <%- include('partials/clothes_card', { 
+                        itemName: 'Brown Shorts' ,
+                        image: '/img/photos/Item - short@2x.jpg',
+                        description: 'Casual Plain Brown Shorts',
+                        brand: 'George',
+                        tags: 'casual, bottoms'
+                    }); %>
 
-                    <a href="/pickup?itemcount=2" class="btn btn-primary btn-block mt-3">Pick up all</a>
-                    <button class="btn btn-outline-dark btn-lg btn-block toast-trigger" data-toast-message="This button will give you sharing options for messaging apps e.g., WhatsApp, Messenger, to share this clothes with others. Not yet implemented in this prototype." data-toast-style="info">Get Opinion from Others</button>
+                    <button href="/pickup?itemcount=2" class="button-link btn btn-primary btn-block mt-3">Pick up all</button>
+                    <button class="btn btn-outline-dark btn-block toast-trigger" data-toast-message="This button will give you sharing options for messaging apps e.g., WhatsApp, Messenger, to share this clothes with others. Not yet implemented in this prototype." data-toast-style="info">Get Opinion from Others</button>
                     <!-- <a href="/1a_add_details" class="btn btn-lg btn-primary">add details</a> -->
                 </div>
             </div>
@@ -37,7 +49,7 @@
 
         <%- include('partials/navbar_bottom', { active: 1 }); %>
 
-            <%- include('partials/scripts'); %>
+        <%- include('partials/scripts'); %>
 </body>
 
 </html>

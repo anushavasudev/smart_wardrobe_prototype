@@ -27,14 +27,16 @@
         <div class="row">
             <div class="col">
                 <p>This item is in the wardrobe</p>
-                <a href="#" class="btn btn-primary btn-lg btn-block toast-trigger" data-toast-message="Please say what you want to know about this clothes.">
-                    <i class="fas fa-microphone mr-4" aria-hidden="true"></i> Ask About Tag Information</a>
+                <button class="btn btn-primary btn-lg btn-block toast-trigger" data-toast-message="Please say what you want to know about this clothes.">
+                    <i class="fas fa-microphone mr-2" aria-hidden="true"></i> Ask About Tag Information</button>
                 <% if (mode == 'browse') { %>
-                    <a href="/pickup" class="btn btn-primary btn-block btn-lg ">
-                        <i class="fas fa-level-up-alt mr-4" aria-hidden="true"></i> Pick Up Now</a>
+                    <button href="/pickup" class="button-link btn btn-primary btn-block btn-lg ">
+                        <i class="fas fa-level-up-alt mr-2" aria-hidden="true"></i> Pick Up Now</button>
                 <% } else if (mode == 'scan') { %>
-                    <a href="/pickup" class="btn btn-primary btn-block btn-lg ">
-                        <i class="fas fa-plus mr-4" aria-hidden="true"></i> Add to my clothes list.</a>
+                    <button href="/home" class="button-link btn btn-primary btn-block btn-lg toast-trigger" data-toast-message="Item added to my clothes list." data-toast-style="success">
+                        <i class="fas fa-plus mr-2" aria-hidden="true"></i> Add to my clothes list.</button>
+                    <button href="/scan_hanging" class="button-link btn btn-outline-dark btn-lg btn-block">
+                        Hang in Wardrobe</button>
                 <% } %>
                 <button class="btn btn-outline-dark btn-lg btn-block toast-trigger" data-toast-message="This button will give you sharing options for messaging apps e.g., WhatsApp, Messenger, to share this clothes with others. Not yet implemented in this prototype." data-toast-style="info">Get Opinion from Others</button>
             </div>

@@ -1,9 +1,9 @@
-<div class="card mt-3">
-    <img class="card-img-top" src="/img/photos/Item - dress shirt@2x.jpg" alt="Card image cap">
+<div class="card mt-3 clothes-card" data-tags="<%= locals.tags || '' %>">
+    <img class="card-img-top" src="<%= locals.image || '/img/photos/Item - dress shirt@2x.jpg' %>" alt="clothes item image: <%= locals.itemName || 'White Dress Shirt' %>" aria-hidden="true">
     <div class="card-body">
         <div class="row">
             <div class="col-10">
-                <h3>White Dress Shirt</h3s>
+                <h3><a href="clothes_detail" class="text-dark" aria-label="<%= locals.itemName || 'White Dress Shirt' %>, select to view details"><%= locals.itemName || 'White Dress Shirt' %></a></h3>
             </div>
             <div class="col-2">
                 <%- include('fav_toggle', { favorite: locals.favorite }); %>
@@ -12,15 +12,14 @@
         <div class="row">
             <div class="col">
                 <p>
-                    Formal long-sleeve white dress shirt
-                    <br>56% Cotton, 44% Modal
-                    <br>From H&amp;M
+                    <%= locals.description || 'Formal long-sleeve white dress shirt, 56% Cotton, 44% Modal' %>
+                    from <%= locals.brand || 'Arrow' %>
                 </p>
-                <p>Notes: A gift from mom, Christmas 2017.</p>
+                <p><b>Notes:</b> <%= locals.notes || 'A gift from mom, Christmas 2017.' %></p>
                 <p>This clothes is on the wardrobe</p>
-                <a href="/pickup" class="btn btn-primary btn-lg">Pick up now</a>
+                <button href="/pickup" class="button-link btn btn-primary btn-lg">Pick up now</button>
                 <!-- <button class="btn btn-primary btn-block" onclick="displayToast('Added to Pick Up List', 3000, 'success')">Add to pick up list</button> -->
-                <a href="/clothes_detail" class="btn btn-outline-dark btn-lg">Details</a>
+                <button href="/clothes_detail" class="button-link btn btn-outline-dark btn-lg">Details</button>
                 <button class="mt-1 btn btn-outline-dark btn-lg toast-trigger" data-toast-message="This item was added to your pick up list" data-toast-style="success">Add to Pick Up List</button>
             </div>
         </div>

@@ -10,10 +10,18 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <%- include('partials/clothes_card', { favorite: true }); %>
-                <%- include('partials/clothes_card', { favorite: true }); %>
-                <%- include('partials/clothes_card', { favorite: true }); %>
-                <%- include('partials/clothes_card', { favorite: true }); %>
+                <%- include('partials/clothes_combo', { 
+                    itemName: 'Striped T-Shirt + Brown Shorts' ,
+                    image: '/img/photos/Casual Outfit@2x.jpg',
+                    tags: 'casual'
+                }); %>
+                <%- include('partials/clothes_card', { 
+                    itemName: 'Black Dress Pants' ,
+                    image: '/img/photos/Item - pants@2x.jpg',
+                    description: 'Formal Plain Black Slim-fit Dress Pants',
+                    brand: 'Arrow',
+                    tags: 'formal, bottoms'
+                }); %>
                 <!-- <a href="/1a_add_details" class="btn btn-lg btn-primary">add details</a> -->
             </div>
         </div>

@@ -1,19 +1,20 @@
-<nav class="navbar fixed-top navbar-dark" aria-label="Title bar">
-    <div class="col-8 text-center order-2">
-        <a href="#" class="navbar-brand" role="alert">
+<nav class="navbar px-0 fixed-top navbar-dark" aria-label="Title bar">
+    <div class="col-6 text-center text-center order-2">
+        <b><a href="" class="navbar-brand" role="alert">
             <%= title %>
-        </a>
+        </a></b>
     </div>
-    <div class="col-2 order-1">
+    <div class="col-3 text-center order-1">
         <% if (locals.back !== false) { %>
-            <a href="#" class="navbar-brand " onclick="history.go(-1)">‹ Back</a>
+            <button href="#" class="navbar-brand btn btn-link" onclick="history.go(-1)"><i class="fas fa-chevron-left" aria-label="back"></i></button>
         <% } %>
     </div>
-    <div class="col-2 order-3">
+    <div class="col-3 text-center order-3">
         <% if (locals.icon === true) { %>
-        <a href="#" class="btn btn-light">
-            <i class="fas fa-list" aria-label="pick up list, 0 items"></i>
-        </a>
+            <button href="/pickup_list" class="button-link navsearch btn btn-light nav-btn">
+                <i class="fas fa-list" aria-label="2 items in your pick up list"></i>
+                <span class="badge badge-light" aria-hidden="true">2</span>
+            </button>
         <% } %>
     </div>
 </nav>
