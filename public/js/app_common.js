@@ -69,8 +69,8 @@ $(function () {
         if (msg.action === 'hang') {
             console.log('hanged')
             if (typeof onHanged === "function") {
-                window.navigator.vibrate([100, 50, 100]);
                 onHanged(clothesData[+msg.data.clothes_id])
+                window.navigator.vibrate([100, 50, 100]);
             } else {
                 displayToast(
                     'We have received your striped T-shirt in the wardrobe.',
