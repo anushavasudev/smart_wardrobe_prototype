@@ -56,9 +56,9 @@ $(function () {
             }
         }
 
-        if (msg.action === 'reset') {
-            console.log('resetting')
-            window.location.href = '/'
+        if (msg.action === 'scan') {
+            console.log('scan')
+            window.location.href = '/scan_result'
         }
 
         if (msg.action === 'reset') {
