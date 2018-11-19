@@ -51,15 +51,15 @@ $(function () {
         if (msg.action === 'scan') {
 
             if (typeof onScanned === "function") {
-                window.navigator.vibrate(200);
                 onScanned(clothesData[+msg.data.clothes_id])
+                window.navigator.vibrate(200);
             }
         }
 
-        if (msg.action === 'scan') {
-            console.log('scan')
-            window.location.href = '/scan_result'
-        }
+        // if (msg.action === 'scan') {
+        //     console.log('scan')
+        //     window.location.href = '/scan_result'
+        // }
 
         if (msg.action === 'reset') {
             console.log('resetting')
